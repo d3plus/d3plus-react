@@ -27,7 +27,7 @@ Using NPM: \`npm install ${name}\`.
 `;
 new shell.ShellString(contents).to(template);
 
-shell.exec(`jsdoc2md '+(bin|src)/**/*.js' --heading-depth 3 -t ${template} > README.md`, (code, stdout) => {
+shell.exec(`jsdoc2md '+(bin|src)/**/*.+(js|jsx)' --heading-depth 3 -t ${template} > README.md`, (code, stdout) => {
   if (code) {
     log.fail();
     shell.echo(stdout);
