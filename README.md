@@ -9,7 +9,27 @@ React components for d3plus visualizations.
 
 ## Installing
 
-Using NPM: `npm install d3plus-react`.
+Use `npm install d3plus-react -S` to install the package as a dependency. And then use the components in your React project like this:
+
+```js
+import {Treemap} from "d3plus-react";
+
+const data = [
+  {id: "alpha", value: 29},
+  {id: "beta",  value: 10}
+];
+
+<Treemap config={{data}} />
+```
+
+Additionally, a file named `.d3plus.js` needs to exist in the root path of your project. This file should contain all global styles to be applied to the visualizations (passed to the .config( ) method). Here is an example that makes all of your visualizations use the best font ever created:
+```js
+export default {
+  shapeConfig: {
+    fontFamily: "Comic Sans MS"
+  }
+};
+```
 
 ## API Reference
 ### Classes
@@ -130,4 +150,4 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 
 
 
-###### <sub>Documentation generated on Wed, 08 Feb 2017 18:32:18 GMT</sub>
+###### <sub>Documentation generated on Wed, 08 Feb 2017 18:44:41 GMT</sub>
