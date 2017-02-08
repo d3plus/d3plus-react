@@ -11,7 +11,7 @@ React components for d3plus visualizations.
 
 Use `npm install d3plus-react -S` to install the package as a dependency. And then use the components in your React project like this:
 
-```js
+```jsx
 import {Treemap} from "d3plus-react";
 
 const data = [
@@ -150,4 +150,4 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 
 
 
-###### <sub>Documentation generated on Wed, 08 Feb 2017 18:44:41 GMT</sub>
+###### <sub>Documentation generated on Wed, 08 Feb 2017 18:45:51 GMT</sub>

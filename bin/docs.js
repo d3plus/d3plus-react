@@ -19,7 +19,7 @@ ${description}
 
 Use \`npm install ${name} -S\` to install the package as a dependency. And then use the components in your React project like this:
 
-\`\`\`js
+\`\`\`jsx
 import {Treemap} from "d3plus-react";
 
 const data = [
