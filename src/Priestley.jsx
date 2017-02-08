@@ -1,5 +1,5 @@
 import {Priestley as Viz} from "d3plus-priestley";
-import Shell from "./Viz";
+import Shell from "./Viz.jsx";
 
 /**
     @class Priestley

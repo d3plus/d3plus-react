@@ -1,5 +1,5 @@
 import {Treemap as Viz} from "d3plus-hierarchy";
-import Shell from "./Viz";
+import Shell from "./Viz.jsx";
 
 /**
     @class Treemap

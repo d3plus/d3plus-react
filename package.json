@@ -32,6 +32,7 @@
     "react": "^15.4.2"
   },
   "scripts": {
+    "build": "node bin/build",
     "dev": "d3plus-dev",
     "docs": "node bin/docs",
     "env": "d3plus-env",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "d3plus-dev": "^0.2.1",
-    "eslint-plugin-react": "^6.9.0"
+    "eslint-plugin-react": "^6.9.0",
+    "rollup-plugin-jsx": "^1.0.3"
   }
 }

@@ -1,5 +1,5 @@
 import {Network as Viz} from "d3plus-network";
-import Shell from "./Viz";
+import Shell from "./Viz.jsx";
 
 /**
     @class Network

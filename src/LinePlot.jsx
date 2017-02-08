@@ -1,5 +1,5 @@
 import {LinePlot as Viz} from "d3plus-plot";
-import Shell from "./Viz";
+import Shell from "./Viz.jsx";
 
 /**
     @class LinePlot
