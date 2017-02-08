@@ -1,0 +1,7 @@
+build/*.zip
+example/
+test/
+.eslintrc
+.gitignore
+.travis.yml
+npm-debug.log

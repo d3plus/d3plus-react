@@ -1,0 +1,45 @@
+{
+  "name": "d3plus-react",
+  "version": "0.1.0",
+  "description": "React components for d3plus visualizations.",
+  "main": "build/d3plus-react.js",
+  "jsnext:main": "index",
+  "license": "MIT",
+  "homepage": "https://d3plus.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d3plus/d3plus-react.git"
+  },
+  "keywords": [
+    "react",
+    "d3",
+    "d3plus",
+    "data",
+    "visualization"
+  ],
+  "author": {
+    "name": "Dave Landry",
+    "email": "landry.dave@gmail.com",
+    "url": "http://www.dave-landry.com"
+  },
+  "dependencies": {
+    "d3plus-geomap": "^0.3.0",
+    "d3plus-hierarchy": "^0.3.2",
+    "d3plus-network": "^0.1.4",
+    "d3plus-plot": "^0.5.7",
+    "d3plus-priestley": "^0.1.15",
+    "d3plus-viz": "^0.6.4",
+    "react": "^15.4.2"
+  },
+  "scripts": {
+    "dev": "d3plus-dev",
+    "docs": "node bin/docs",
+    "env": "d3plus-env",
+    "release": "node bin/release",
+    "test": "d3plus-test"
+  },
+  "devDependencies": {
+    "d3plus-dev": "^0.2.1",
+    "eslint-plugin-react": "^6.9.0"
+  }
+}
