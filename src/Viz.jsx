@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import {default as globalConfig} from ".d3plus";
 import {dataFold as dataFormat} from "d3plus-viz";
 
 import {Geomap} from "d3plus-geomap";
@@ -41,7 +40,7 @@ class Viz extends Component {
     const {config, dataFormat} = this.props;
 
     const viz = this.state.viz
-      .config(globalConfig)
+      .config(this.context.d3plus || {})
       .config(Object.assign({}, config, {data: []}));
 
     if (config.data) viz.data(config.data, dataFormat);
@@ -60,6 +59,10 @@ class Viz extends Component {
   }
 
 }
+
+Viz.contextTypes = {
+  d3plus: React.PropTypes.object
+};
 
 /**
     @memberof Viz
