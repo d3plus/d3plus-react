@@ -1,4 +1,4 @@
-import {Pie as Viz} from "d3plus-hierarchy";
+import {Pie as type} from "d3plus-hierarchy";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class Pie extends Shell {}
-Pie.defaultProps = {Viz};
+Pie.defaultProps = {type};
 export default Pie;

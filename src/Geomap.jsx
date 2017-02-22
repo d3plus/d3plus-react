@@ -1,4 +1,4 @@
-import {Geomap as Viz} from "d3plus-geomap";
+import {Geomap as type} from "d3plus-geomap";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class Geomap extends Shell {}
-Geomap.defaultProps = {Viz};
+Geomap.defaultProps = {type};
 export default Geomap;

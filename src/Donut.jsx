@@ -1,4 +1,4 @@
-import {Donut as Viz} from "d3plus-hierarchy";
+import {Donut as type} from "d3plus-hierarchy";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class Donut extends Shell {}
-Donut.defaultProps = {Viz};
+Donut.defaultProps = {type};
 export default Donut;

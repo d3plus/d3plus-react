@@ -1,4 +1,4 @@
-import {Tree as Viz} from "d3plus-hierarchy";
+import {Tree as type} from "d3plus-hierarchy";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class Tree extends Shell {}
-Tree.defaultProps = {Viz};
+Tree.defaultProps = {type};
 export default Tree;

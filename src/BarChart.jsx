@@ -1,4 +1,4 @@
-import {BarChart as Viz} from "d3plus-plot";
+import {BarChart as type} from "d3plus-plot";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class BarChart extends Shell {}
-BarChart.defaultProps = {Viz};
+BarChart.defaultProps = {type};
 export default BarChart;

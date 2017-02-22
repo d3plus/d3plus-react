@@ -1,4 +1,4 @@
-import {Network as Viz} from "d3plus-network";
+import {Network as type} from "d3plus-network";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class Network extends Shell {}
-Network.defaultProps = {Viz};
+Network.defaultProps = {type};
 export default Network;

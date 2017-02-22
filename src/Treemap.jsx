@@ -1,4 +1,4 @@
-import {Treemap as Viz} from "d3plus-hierarchy";
+import {Treemap as type} from "d3plus-hierarchy";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class Treemap extends Shell {}
-Treemap.defaultProps = {Viz};
+Treemap.defaultProps = {type};
 export default Treemap;

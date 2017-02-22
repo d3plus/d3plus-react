@@ -1,4 +1,4 @@
-import {Plot as Viz} from "d3plus-plot";
+import {Plot as type} from "d3plus-plot";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class Plot extends Shell {}
-Plot.defaultProps = {Viz};
+Plot.defaultProps = {type};
 export default Plot;

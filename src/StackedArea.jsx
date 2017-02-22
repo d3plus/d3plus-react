@@ -1,4 +1,4 @@
-import {StackedArea as Viz} from "d3plus-plot";
+import {StackedArea as type} from "d3plus-plot";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class StackedArea extends Shell {}
-StackedArea.defaultProps = {Viz};
+StackedArea.defaultProps = {type};
 export default StackedArea;

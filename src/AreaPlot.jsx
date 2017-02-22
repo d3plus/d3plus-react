@@ -1,4 +1,4 @@
-import {AreaPlot as Viz} from "d3plus-plot";
+import {AreaPlot as type} from "d3plus-plot";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class AreaPlot extends Shell {}
-AreaPlot.defaultProps = {Viz};
+AreaPlot.defaultProps = {type};
 export default AreaPlot;

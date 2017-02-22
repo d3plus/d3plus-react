@@ -1,4 +1,4 @@
-import {LinePlot as Viz} from "d3plus-plot";
+import {LinePlot as type} from "d3plus-plot";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class LinePlot extends Shell {}
-LinePlot.defaultProps = {Viz};
+LinePlot.defaultProps = {type};
 export default LinePlot;

@@ -1,4 +1,4 @@
-import {Priestley as Viz} from "d3plus-priestley";
+import {Priestley as type} from "d3plus-priestley";
 import Shell from "./Viz.jsx";
 
 /**
@@ -6,5 +6,5 @@ import Shell from "./Viz.jsx";
     @extends Viz
 */
 class Priestley extends Shell {}
-Priestley.defaultProps = {Viz};
+Priestley.defaultProps = {type};
 export default Priestley;
