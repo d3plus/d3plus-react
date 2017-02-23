@@ -23,8 +23,9 @@ class Viz extends Component {
   componentDidMount() {
 
     const {type} = this.props;
+    const Constructor = typeof type === "string" ? typeLookup[type] : type;
 
-    const viz = new (typeof type === "string" && typeLookup[type] ? typeLookup[type] : type)()
+    const viz = new Constructor()
       .select(this.refs.container);
 
     this.setState({viz});
