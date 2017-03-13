@@ -67,67 +67,67 @@ export default {
 
 ### AreaPlot ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="BarChart"></a>
 
 ### BarChart ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="Donut"></a>
 
 ### Donut ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="Geomap"></a>
 
 ### Geomap ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="LinePlot"></a>
 
 ### LinePlot ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="Network"></a>
 
 ### Network ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="Pie"></a>
 
 ### Pie ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="Plot"></a>
 
 ### Plot ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="Priestley"></a>
 
 ### Priestley ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="StackedArea"></a>
 
 ### StackedArea ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="Tree"></a>
 
 ### Tree ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="Treemap"></a>
 
 ### Treemap ⇐ <code>[Viz](#Viz)</code>
 **Kind**: global class  
-**Extends:** <code>[Viz](#Viz)</code>  
+**Extends**: <code>[Viz](#Viz)</code>  
 <a name="Viz"></a>
 
 ### Viz ⇐ <code>React.Component</code>
 **Kind**: global class  
-**Extends:** <code>React.Component</code>  
+**Extends**: <code>React.Component</code>  
 
 * [Viz](#Viz) ⇐ <code>React.Component</code>
     * [new Viz()](#new_Viz_new)
@@ -150,4 +150,4 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 
 
 
-###### <sub>Documentation generated on Thu, 23 Feb 2017 16:53:19 GMT</sub>
+###### <sub>Documentation generated on Mon, 13 Mar 2017 20:58:13 GMT</sub>
