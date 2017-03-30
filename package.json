@@ -24,11 +24,11 @@
   },
   "dependencies": {
     "d3plus-geomap": "^0.4.2",
-    "d3plus-hierarchy": "^0.3.2",
-    "d3plus-network": "^0.1.4",
-    "d3plus-plot": "^0.5.14",
+    "d3plus-hierarchy": "^0.3.4",
+    "d3plus-network": "^0.1.6",
+    "d3plus-plot": "^0.5.15",
     "d3plus-priestley": "^0.1.15",
-    "d3plus-viz": "^0.8.1",
+    "d3plus-viz": "^0.8.2",
     "eslint-plugin-react": "^6.10.3",
     "react": "^15.4.2"
   },
