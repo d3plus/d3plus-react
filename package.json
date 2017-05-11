@@ -26,10 +26,9 @@
     "d3plus-geomap": "^0.4.2",
     "d3plus-hierarchy": "^0.3.4",
     "d3plus-network": "^0.1.6",
-    "d3plus-plot": "^0.5.15",
+    "d3plus-plot": "^0.5.16",
     "d3plus-priestley": "^0.1.15",
-    "d3plus-viz": "^0.8.2",
-    "eslint-plugin-react": "^6.10.3",
+    "d3plus-viz": "^0.8.6",
     "react": "^15.4.2"
   },
   "scripts": {
@@ -40,7 +39,7 @@
     "test": "d3plus-test"
   },
   "devDependencies": {
-    "d3plus-dev": "^0.4.0",
+    "d3plus-dev": "^0.4.9",
     "eslint-plugin-react": "^7.0.0",
     "rollup-plugin-jsx": "^1.0.3"
   }
