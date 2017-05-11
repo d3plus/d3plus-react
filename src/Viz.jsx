@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 
 import {Geomap} from "d3plus-geomap";
 import {Donut, Pie, Tree, Treemap} from "d3plus-hierarchy";
@@ -12,7 +12,7 @@ const typeLookup = {AreaPlot, BarChart, Donut, Geomap, LinePlot, Network, Pie, P
     @extends React.Component
     @desc Creates SVG paths and coordinate points based on an array of data. See [this example](https://d3plus.org/examples/d3plus-geomap/getting-started/) for help getting started using the geomap generator.
 */
-class Viz extends Component {
+class Viz extends React.Component {
 
   /**
       @memberof Viz
