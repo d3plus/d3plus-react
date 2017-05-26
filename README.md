@@ -150,4 +150,4 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 
 
 
-###### <sub>Documentation generated on Thu, 11 May 2017 21:00:27 GMT</sub>
+###### <sub>Documentation generated on Fri, 26 May 2017 19:40:03 GMT</sub>
