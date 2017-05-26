@@ -6,12 +6,13 @@ const {description, name} = JSON.parse(shell.cat("package.json"));
 
 log.timer("writing JSDOC comments to README.md");
 const template = `${shell.tempdir()}/README.hbs`;
+const docDir = `${shell.pwd()}/node_modules/d3plus-dev/bin/docs`;
 const contents = `# ${name}
 
 [![NPM Release](http://img.shields.io/npm/v/${name}.svg?style=flat)](https://www.npmjs.org/package/${name})
 [![Build Status](https://travis-ci.org/d3plus/${name}.svg?branch=master)](https://travis-ci.org/d3plus/${name})
 [![Dependency Status](http://img.shields.io/david/d3plus/${name}.svg?style=flat)](https://david-dm.org/d3plus/${name})
-[![Slack](https://img.shields.io/badge/Slack-Click%20to%20Join!-green.svg?style=social)](https://goo.gl/forms/ynrKdvusekAwRMPf2)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat)](https://gitter.im/d3plus/)
 
 ${description}
 
@@ -40,14 +41,43 @@ export default {
 \`\`\`
 
 ## API Reference
-{{>main}}
+
+{{#modules~}}
+{{#if @first~}}##### Scripts
+{{/if~}}
+* [{{{name}}}](#{{{anchorName}}}){{#if summary}} - {{{summary}}}{{else if description}} - {{{description}}}{{/if}}
+{{#if @last}}
+
+{{/if~}}
+{{/modules}}
+{{>list kind="class" title="Classes" ~}}
+{{>list kind="mixin" title="Mixins" ~}}
+{{>list kind="member" title="Members" ~}}
+{{>list kind="namespace" title="Objects" ~}}
+{{>list kind="constant" title="Constants" ~}}
+{{>list kind="function" title="Functions" ~}}
+{{>list kind="event" title="Events" ~}}
+{{>list kind="typedef" title="Typedefs" ~}}
+{{>list kind="external" title="External" ~}}
+{{>list kind="file" title="File" ~}}
+
+---
+
+{{#orphans ~}}
+<a name="{{{anchorName}}}"></a>
+#### {{>sig}}
+{{>body~}}
+
+---
+
+{{/orphans~}}
 
 
-###### <sub>Documentation generated on ${new Date().toUTCString()}</sub>
+###### <sub>Documentation generated on {{currentDate}}</sub>
 `;
 new shell.ShellString(contents).to(template);
 
-shell.exec(`jsdoc2md '+(bin|src)/**/*.+(js|jsx)' --heading-depth 3 -t ${template} > README.md`, (code, stdout) => {
+shell.exec(`jsdoc2md '+(bin|src)/**/*.+(js|jsx)' --separators --helper ${ docDir }/helpers.js --partial '${ docDir }/partials/*.hbs' -t ${template} > README.md`, (code, stdout) => {
   if (code) {
     log.fail();
     shell.echo(stdout);

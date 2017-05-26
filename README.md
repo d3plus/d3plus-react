@@ -3,7 +3,7 @@
 [![NPM Release](http://img.shields.io/npm/v/d3plus-react.svg?style=flat)](https://www.npmjs.org/package/d3plus-react)
 [![Build Status](https://travis-ci.org/d3plus/d3plus-react.svg?branch=master)](https://travis-ci.org/d3plus/d3plus-react)
 [![Dependency Status](http://img.shields.io/david/d3plus/d3plus-react.svg?style=flat)](https://david-dm.org/d3plus/d3plus-react)
-[![Slack](https://img.shields.io/badge/Slack-Click%20to%20Join!-green.svg?style=social)](https://goo.gl/forms/ynrKdvusekAwRMPf2)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat)](https://gitter.im/d3plus/)
 
 React components for d3plus visualizations.
 
@@ -32,122 +32,149 @@ export default {
 ```
 
 ## API Reference
-### Classes
 
-<dl>
-<dt><a href="#AreaPlot">AreaPlot</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#BarChart">BarChart</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#Donut">Donut</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#Geomap">Geomap</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#LinePlot">LinePlot</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#Network">Network</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#Pie">Pie</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#Plot">Plot</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#Priestley">Priestley</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#StackedArea">StackedArea</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#Tree">Tree</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#Treemap">Treemap</a> ⇐ <code><a href="#Viz">Viz</a></code></dt>
-<dd></dd>
-<dt><a href="#Viz">Viz</a> ⇐ <code>React.Component</code></dt>
-<dd></dd>
-</dl>
+##### Classes
+* [AreaPlot](#AreaPlot)
+* [BarChart](#BarChart)
+* [Donut](#Donut)
+* [Geomap](#Geomap)
+* [LinePlot](#LinePlot)
+* [Network](#Network)
+* [Pie](#Pie)
+* [Plot](#Plot)
+* [Priestley](#Priestley)
+* [StackedArea](#StackedArea)
+* [Tree](#Tree)
+* [Treemap](#Treemap)
+* [Viz](#Viz)
+
+---
 
 <a name="AreaPlot"></a>
+#### **AreaPlot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/AreaPlot.jsx#L4)
 
-### AreaPlot ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="BarChart"></a>
+#### **BarChart** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BarChart.jsx#L4)
 
-### BarChart ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Donut"></a>
+#### **Donut** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Donut.jsx#L4)
 
-### Donut ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Geomap"></a>
+#### **Geomap** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Geomap.jsx#L4)
 
-### Geomap ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="LinePlot"></a>
+#### **LinePlot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/LinePlot.jsx#L4)
 
-### LinePlot ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Network"></a>
+#### **Network** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Network.jsx#L4)
 
-### Network ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Pie"></a>
+#### **Pie** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Pie.jsx#L4)
 
-### Pie ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Plot"></a>
+#### **Plot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Plot.jsx#L4)
 
-### Plot ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Priestley"></a>
+#### **Priestley** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Priestley.jsx#L4)
 
-### Priestley ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="StackedArea"></a>
+#### **StackedArea** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/StackedArea.jsx#L4)
 
-### StackedArea ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Tree"></a>
+#### **Tree** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Tree.jsx#L4)
 
-### Tree ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Treemap"></a>
+#### **Treemap** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Treemap.jsx#L4)
 
-### Treemap ⇐ [<code>Viz</code>](#Viz)
-**Kind**: global class  
-**Extends**: [<code>Viz</code>](#Viz)  
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Viz"></a>
+#### **Viz** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L10)
 
-### Viz ⇐ <code>React.Component</code>
-**Kind**: global class  
-**Extends**: <code>React.Component</code>  
+
+This is a global class, and extends all of the methods and functionality of <code>React.Component</code>.
+
 
 * [Viz](#Viz) ⇐ <code>React.Component</code>
     * [new Viz()](#new_Viz_new)
     * [.defaultProps](#Viz.defaultProps)
 
-<a name="new_Viz_new"></a>
+<a name="new_Viz_new" href="new_Viz_new">#</a> new **Viz**()
 
-#### new Viz()
 Creates SVG paths and coordinate points based on an array of data. See [this example](https://d3plus.org/examples/d3plus-geomap/getting-started/) for help getting started using the geomap generator.
 
-<a name="Viz.defaultProps"></a>
 
-#### Viz.defaultProps
-**Kind**: static property of [<code>Viz</code>](#Viz)  
+
+
+<a name="Viz.defaultProps" href="Viz.defaultProps">#</a> Viz.**defaultProps** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L75)
+
+
+This is a static property of [<code>Viz</code>](#Viz).
+
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | [config] | <code>Object</code> | <code>{}</code> | An object containing method/value pairs to be passed to the visualization's .config( ) method. |
 | [dataFormat] | <code>function</code> | <code>d3plus.dataFold</code> | A custom formatting function to be used when formatting data from an AJAX request. The function will be passed the raw data returned from the request, and is expected to return an array of values used for the data method. |
 
+---
 
-
-###### <sub>Documentation generated on Fri, 26 May 2017 19:40:03 GMT</sub>
+###### <sub>Documentation generated on Fri, 26 May 2017 19:44:40 GMT</sub>
