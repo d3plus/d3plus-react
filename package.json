@@ -28,7 +28,7 @@
     "d3plus-network": "^0.1.7",
     "d3plus-plot": "^0.5.19",
     "d3plus-priestley": "^0.1.17",
-    "d3plus-viz": "^0.9.0",
+    "d3plus-viz": "^0.9.1",
     "react": "^15.5.4"
   },
   "scripts": {
