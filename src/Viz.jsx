@@ -25,7 +25,7 @@ class Viz extends React.Component {
     const Constructor = typeof type === "string" ? typeLookup[type] : type;
 
     const viz = new Constructor()
-      .select(this.refs.container);
+      .select(this.container);
 
     this.setState({viz});
   }
@@ -58,7 +58,7 @@ class Viz extends React.Component {
       @private
   */
   render() {
-    return <div className="viz" ref="container"></div>;
+    return <div className="viz" ref={container => this.container = container}></div>;
   }
 
 }
