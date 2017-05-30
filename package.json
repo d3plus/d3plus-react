@@ -29,6 +29,7 @@
     "d3plus-plot": "^0.5.20",
     "d3plus-priestley": "^0.1.17",
     "d3plus-viz": "^0.9.2",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4"
   },
   "scripts": {

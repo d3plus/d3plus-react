@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import {Geomap} from "d3plus-geomap";
 import {Donut, Pie, Tree, Treemap} from "d3plus-hierarchy";
@@ -63,9 +64,7 @@ class Viz extends React.Component {
 
 }
 
-Viz.contextTypes = {
-  d3plus: React.PropTypes.object
-};
+Viz.contextTypes = {d3plus: PropTypes.object};
 
 /**
     @memberof Viz
