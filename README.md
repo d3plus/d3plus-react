@@ -147,7 +147,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Viz"></a>
-#### **Viz** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L10)
+#### **Viz** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L12)
 
 
 This is a global class, and extends all of the methods and functionality of <code>React.Component</code>.
@@ -164,7 +164,7 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 
 
 
-<a name="Viz.defaultProps" href="Viz.defaultProps">#</a> Viz.**defaultProps** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L75)
+<a name="Viz.defaultProps" href="Viz.defaultProps">#</a> Viz.**defaultProps** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L77)
 
 
 This is a static property of [<code>Viz</code>](#Viz).
@@ -177,4 +177,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Fri, 26 May 2017 19:44:40 GMT</sub>
+###### <sub>Documentation generated on Tue, 30 May 2017 21:19:25 GMT</sub>
