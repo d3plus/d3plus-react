@@ -1,5 +1,7 @@
 import React from "react";
 
+import {assign} from "d3plus-common";
+
 import {Geomap} from "d3plus-geomap";
 import {Donut, Pie, Tree, Treemap} from "d3plus-hierarchy";
 import {Network} from "d3plus-network";
@@ -39,7 +41,7 @@ class Viz extends React.Component {
 
     const {config, dataFormat} = this.props;
 
-    const viz = this.state.viz.config(this.context.d3plus || {});
+    const viz = this.state.viz.config(assign({}, this.context.d3plus || {}));
 
     if (dataFormat && config.data) {
       viz
