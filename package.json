@@ -23,6 +23,7 @@
     "url": "http://www.dave-landry.com"
   },
   "dependencies": {
+    "d3plus-common": "^0.6.19",
     "d3plus-geomap": "^0.4.6",
     "d3plus-hierarchy": "^0.3.9",
     "d3plus-network": "^0.1.7",
