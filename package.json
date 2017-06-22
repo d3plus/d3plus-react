@@ -31,7 +31,7 @@
     "d3plus-priestley": "^0.1.17",
     "d3plus-viz": "^0.9.3",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4"
+    "react": "^15.6.1"
   },
   "scripts": {
     "build": "node bin/build",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "d3plus-dev": "^0.4.10",
-    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react": "^7.1.0",
     "rollup-plugin-jsx": "^1.0.3"
   }
 }
