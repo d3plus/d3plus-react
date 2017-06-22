@@ -177,4 +177,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Wed, 31 May 2017 14:47:50 GMT</sub>
+###### <sub>Documentation generated on Thu, 22 Jun 2017 16:41:22 GMT</sub>
