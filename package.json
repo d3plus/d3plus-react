@@ -29,7 +29,7 @@
     "d3plus-network": "^0.1.7",
     "d3plus-plot": "^0.5.21",
     "d3plus-priestley": "^0.1.17",
-    "d3plus-viz": "^0.9.3",
+    "d3plus-viz": "^0.10.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1"
   },
