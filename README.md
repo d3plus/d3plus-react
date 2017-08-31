@@ -157,24 +157,26 @@ This is a global class, and extends all of the methods and functionality of <cod
     * [new Viz()](#new_Viz_new)
     * [.defaultProps](#Viz.defaultProps)
 
-<a name="new_Viz_new" href="new_Viz_new">#</a> new **Viz**()
+
+<a name="new_Viz_new" href="#new_Viz_new">#</a> new **Viz**()
 
 Creates SVG paths and coordinate points based on an array of data. See [this example](https://d3plus.org/examples/d3plus-geomap/getting-started/) for help getting started using the geomap generator.
 
 
 
 
-<a name="Viz.defaultProps" href="Viz.defaultProps">#</a> Viz.**defaultProps** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L76)
+
+<a name="Viz.defaultProps" href="#Viz.defaultProps">#</a> Viz.**defaultProps** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L76)
 
 
 This is a static property of [<code>Viz</code>](#Viz).
-
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | [config] | <code>Object</code> | <code>{}</code> | An object containing method/value pairs to be passed to the visualization's .config( ) method. |
 | [dataFormat] | <code>function</code> | <code>d3plus.dataFold</code> | A custom formatting function to be used when formatting data from an AJAX request. The function will be passed the raw data returned from the request, and is expected to return an array of values used for the data method. |
 
+
 ---
 
-###### <sub>Documentation generated on Thu, 22 Jun 2017 16:41:22 GMT</sub>
+###### <sub>Documentation generated on Thu, 31 Aug 2017 18:37:37 GMT</sub>
