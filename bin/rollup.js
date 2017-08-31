@@ -6,7 +6,6 @@ const banner = require("../node_modules/d3plus-dev/bin/banner"),
       log = require("../node_modules/d3plus-dev/bin/log")("rollup"),
       rollup = require("rollup"),
       shell = require("shelljs"),
-      watch = require("rollup-watch"),
       {name} = JSON.parse(shell.cat("package.json"));
 
 shell.config.silent = true;
@@ -16,15 +15,20 @@ module.exports = function(opts = {}) {
   if (opts.deps) plugins.push(deps({jsnext: true}));
   plugins.push(buble());
 
-  const entry = {entry: "index.js", plugins, onwarn: () => {}};
-  const config = {
+  const input = {
+    input: "index.js",
+    plugins,
+    onwarn: () => {}
+  };
+
+  const output = {
+    amd: {id: name},
     banner,
-    dest: `build/${name}${opts.deps ? ".full" : ""}.js`,
+    file: `build/${name}${opts.deps ? ".full" : ""}.js`,
     format: "umd",
-    moduleId: name,
-    moduleName: "d3plus",
-    sourceMap: true,
-    sourceMapFile: `build/${name}${opts.deps ? ".full" : ""}.js`
+    name: "d3plus",
+    sourcemap: true,
+    sourcemapFile: `build/${name}${opts.deps ? ".full" : ""}.js`
   };
 
   /**
@@ -32,16 +36,17 @@ module.exports = function(opts = {}) {
       @desc Custom event handler for rollup watch bundle.
       @private
   */
-  function output(e) {
+  function onwarn(e) {
     switch (e.code) {
-      case "BUILD_START":
-        log.update(`bundling ${config.dest}`);
+      case "BUNDLE_START":
+        log.update(`bundling ${output.file}`);
         return undefined;
-      case "BUILD_END":
-        log.done(`bundled ${config.dest} in ${e.duration}ms`);
+      case "BUNDLE_END":
+        log.done(`bundled ${output.file} in ${e.duration}ms`);
         if (opts.watch) log.timer("watching for changes...");
         return undefined;
       case "ERROR":
+      case "FATAL":
         log.fail();
         shell.echo(`bundle error in '${e.error.id}':`);
         return shell.echo(e.error);
@@ -50,9 +55,9 @@ module.exports = function(opts = {}) {
     }
   }
 
-  log.timer(`bundling ${config.dest}`);
+  log.timer(`bundling ${output.file}`);
   shell.mkdir("-p", "build");
-  if (opts.watch) return watch(rollup, Object.assign(entry, config)).on("event", output);
-  else return rollup.rollup(entry).then(bundle => bundle.write(config));
+  if (opts.watch) return rollup.watch(Object.assign(input, {output, watch: {chokidar: true}})).on("event", onwarn);
+  else return rollup.rollup(input).then(bundle => bundle.write(output));
 
 };
