@@ -1,6 +1,6 @@
 {
   "name": "d3plus-react",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "React components for d3plus visualizations.",
   "main": "build/d3plus-react.js",
   "jsnext:main": "index",
