@@ -14,12 +14,16 @@ Use `npm install d3plus-react -S` to install the package as a dependency. And th
 ```jsx
 import {Treemap} from "d3plus-react";
 
-const data = [
-  {id: "alpha", value: 29},
-  {id: "beta",  value: 10}
-];
+const methods = {
+  groupBy: "id",
+  data: [
+    {id: "alpha", value: 29},
+    {id: "beta",  value: 10}
+  ],
+  size: d => d.value
+};
 
-<Treemap config={{data}} />
+<Treemap config={methods} />
 ```
 
 Additionally, a file named `.d3plus.js` needs to exist in the root path of your project. This file should contain all global styles to be applied to the visualizations (passed to the .config( ) method). Here is an example that makes all of your visualizations use the best font ever created:
@@ -179,4 +183,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Wed, 04 Oct 2017 22:03:07 GMT</sub>
+###### <sub>Documentation generated on Fri, 06 Oct 2017 18:01:53 GMT</sub>
