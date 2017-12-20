@@ -10,5 +10,3 @@ export {default as Priestley} from "./src/Priestley.jsx";
 export {default as StackedArea} from "./src/StackedArea.jsx";
 export {default as Tree} from "./src/Tree.jsx";
 export {default as Treemap} from "./src/Treemap.jsx";
-
-export {default as Viz} from "./src/Viz.jsx";
