@@ -37,7 +37,7 @@ export default {
 
 ## API Reference
 
-##### Classes
+##### 
 * [AreaPlot](#AreaPlot)
 * [BarChart](#BarChart)
 * [Donut](#Donut)
@@ -151,7 +151,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Viz"></a>
-#### **Viz** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L13)
+#### **Viz** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L6)
 
 
 This is a global class, and extends all of the methods and functionality of <code>React.Component</code>.
@@ -159,7 +159,7 @@ This is a global class, and extends all of the methods and functionality of <cod
 
 * [Viz](#Viz) ⇐ <code>React.Component</code>
     * [new Viz()](#new_Viz_new)
-    * [.defaultProps](#Viz.defaultProps)
+    * [.module.exports](#Viz.module.exports)
 
 
 <a name="new_Viz_new" href="#new_Viz_new">#</a> new **Viz**()
@@ -170,7 +170,7 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 
 
 
-<a name="Viz.defaultProps" href="#Viz.defaultProps">#</a> Viz.**defaultProps** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L76)
+<a name="Viz.module.exports" href="#Viz.module.exports">#</a> Viz.**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L69)
 
 
 This is a static property of [<code>Viz</code>](#Viz).
@@ -183,4 +183,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Thu, 16 Nov 2017 02:19:54 GMT</sub>
+###### <sub>Documentation generated on Wed, 20 Dec 2017 19:42:57 GMT</sub>
