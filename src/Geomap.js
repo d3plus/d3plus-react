@@ -1,5 +1,5 @@
 import {Geomap as type} from "d3plus-geomap";
-import Shell from "./Viz.jsx";
+import Shell from "./Viz";
 
 /**
     @class Geomap

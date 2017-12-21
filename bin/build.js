@@ -23,8 +23,6 @@ shell.mkdir("-p", "es");
 shell.exec("buble -i index.js --no modules -m -o es/index.js", (code, stdout) => {
   if (code) kill(code, stdout);
 
-  new shell.ShellString(shell.cat("es/index.js").replace(/\.jsx/g, "")).to("es/index.js");
-
   shell.exec("buble -i src --no modules -m -o es/src", (code, stdout) => {
     if (code) kill(code, stdout);
 

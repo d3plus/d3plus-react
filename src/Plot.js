@@ -1,5 +1,5 @@
 import {Plot as type} from "d3plus-plot";
-import Shell from "./Viz.jsx";
+import Shell from "./Viz";
 
 /**
     @class Plot

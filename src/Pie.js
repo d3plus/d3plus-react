@@ -1,5 +1,5 @@
 import {Pie as type} from "d3plus-hierarchy";
-import Shell from "./Viz.jsx";
+import Shell from "./Viz";
 
 /**
     @class Pie
