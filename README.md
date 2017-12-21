@@ -55,7 +55,7 @@ export default {
 ---
 
 <a name="AreaPlot"></a>
-#### **AreaPlot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/AreaPlot.jsx#L4)
+#### **AreaPlot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/AreaPlot.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -63,7 +63,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="BarChart"></a>
-#### **BarChart** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BarChart.jsx#L4)
+#### **BarChart** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BarChart.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -71,7 +71,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Donut"></a>
-#### **Donut** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Donut.jsx#L4)
+#### **Donut** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Donut.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -79,7 +79,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Geomap"></a>
-#### **Geomap** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Geomap.jsx#L4)
+#### **Geomap** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Geomap.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -87,7 +87,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="LinePlot"></a>
-#### **LinePlot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/LinePlot.jsx#L4)
+#### **LinePlot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/LinePlot.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -95,7 +95,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Network"></a>
-#### **Network** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Network.jsx#L4)
+#### **Network** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Network.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -103,7 +103,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Pie"></a>
-#### **Pie** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Pie.jsx#L4)
+#### **Pie** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Pie.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -111,7 +111,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Plot"></a>
-#### **Plot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Plot.jsx#L4)
+#### **Plot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Plot.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -119,7 +119,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Priestley"></a>
-#### **Priestley** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Priestley.jsx#L4)
+#### **Priestley** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Priestley.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -127,7 +127,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="StackedArea"></a>
-#### **StackedArea** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/StackedArea.jsx#L4)
+#### **StackedArea** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/StackedArea.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -135,7 +135,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Tree"></a>
-#### **Tree** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Tree.jsx#L4)
+#### **Tree** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Tree.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -143,7 +143,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Treemap"></a>
-#### **Treemap** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Treemap.jsx#L4)
+#### **Treemap** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Treemap.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -151,7 +151,7 @@ This is a global class, and extends all of the methods and functionality of [<co
 ---
 
 <a name="Viz"></a>
-#### **Viz** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L6)
+#### **Viz** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L6)
 
 
 This is a global class, and extends all of the methods and functionality of <code>React.Component</code>.
@@ -170,7 +170,7 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 
 
 
-<a name="Viz.module.exports" href="#Viz.module.exports">#</a> Viz.**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L69)
+<a name="Viz.module.exports" href="#Viz.module.exports">#</a> Viz.**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L69)
 
 
 This is a static property of [<code>Viz</code>](#Viz).
@@ -183,4 +183,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Thu, 21 Dec 2017 22:44:28 GMT</sub>
+###### <sub>Documentation generated on Thu, 21 Dec 2017 22:49:13 GMT</sub>
