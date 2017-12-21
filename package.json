@@ -3,7 +3,7 @@
   "version": "0.2.20",
   "description": "React components for d3plus visualizations.",
   "main": "build/d3plus-react.js",
-  "jsnext:main": "index",
+  "jsnext:main": "es/index",
   "license": "MIT",
   "homepage": "https://d3plus.org",
   "repository": {
@@ -45,5 +45,13 @@
     "d3plus-dev": "^0.5.4",
     "eslint-plugin-react": "^7.4.0",
     "rollup-plugin-jsx": "^1.0.3"
-  }
+  },
+  "module": "es/index",
+  "files": [
+    "bin",
+    "build/d3plus-react.js",
+    "build/d3plus-react.js.map",
+    "build/d3plus-react.min.js",
+    "es"
+  ]
 }
