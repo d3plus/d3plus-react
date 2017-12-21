@@ -38,6 +38,7 @@
     "docs": "node bin/docs",
     "dev": "d3plus-dev",
     "env": "d3plus-env",
+    "examples": "d3plus-examples",
     "release": "node bin/release",
     "test": "d3plus-test"
   },
