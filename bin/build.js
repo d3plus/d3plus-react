@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-const log = require("../node_modules/d3plus-dev/bin/log")("documentation"),
+const log = require("../node_modules/d3plus-dev/bin/log")("creating distribution builds"),
       rollup = require("./rollup"),
       shell = require("shelljs"),
       {name} = JSON.parse(shell.cat("package.json"));
