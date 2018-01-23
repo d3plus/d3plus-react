@@ -54,12 +54,14 @@ class Viz extends React.Component {
       @private
   */
   render() {
-    return <div className="viz" ref={container => this.container = container}></div>;
+    const {className} = this.props;
+    return <div className={className} ref={container => this.container = container}></div>;
   }
 
 }
 
 Viz.contextTypes = {d3plus: PropTypes.object};
+Viz.defaultProps = {className: "viz"};
 
 /**
     @memberof Viz
