@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
 
 import {assign} from "d3plus-common";
@@ -8,7 +8,22 @@ import {assign} from "d3plus-common";
     @extends React.Component
     @desc Creates SVG paths and coordinate points based on an array of data. See [this example](https://d3plus.org/examples/d3plus-geomap/getting-started/) for help getting started using the geomap generator.
 */
-class Viz extends React.Component {
+class Viz extends Component {
+
+  /**
+      @memberof Viz
+      @desc Initializes the specific visualization's class instance and binds it to the container <div>.
+      @private
+  */
+  constructor(props) {
+    super(props);
+
+    const {type: Constructor} = props;
+
+    this.state = {
+      viz: new Constructor()
+    };
+  }
 
   /**
       @memberof Viz
@@ -16,14 +31,9 @@ class Viz extends React.Component {
       @private
   */
   componentDidMount() {
-
-    const {type} = this.props;
-    const Constructor = type;
-
-    const viz = new Constructor()
-      .select(this.container);
-
-    this.setState({viz});
+    const {viz} = this.state;
+    viz.select(this.container);
+    this.componentDidUpdate.bind(this)();
   }
 
   /**
@@ -42,7 +52,9 @@ class Viz extends React.Component {
         .config(assign({}, d3plus || {}, config, {data: []}))
         .data(config.data, dataFormat);
     }
-    else viz.config(assign({}, d3plus || {}, config));
+    else {
+      viz.config(assign({}, d3plus || {}, config));
+    }
 
     viz.render();
 
