@@ -170,7 +170,7 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 
 
 
-<a name="Viz.module.exports" href="#Viz.module.exports">#</a> Viz.**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L71)
+<a name="Viz.module.exports" href="#Viz.module.exports">#</a> Viz.**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L83)
 
 
 This is a static property of [<code>Viz</code>](#Viz).
@@ -183,4 +183,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Tue, 23 Jan 2018 18:43:18 GMT</sub>
+###### <sub>Documentation generated on Thu, 25 Jan 2018 18:17:35 GMT</sub>
