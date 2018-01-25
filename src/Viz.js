@@ -41,21 +41,31 @@ class Viz extends Component {
       @desc Updates visualization config on component update.
       @private
   */
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
 
     const globalConfig = this.context.d3plus || {};
-    const {config, dataFormat} = this.props;
+    const {config, dataFormat, forceUpdate} = this.props;
     const {viz} = this.state;
 
-    if (viz && viz.data().length) {
-      viz.config(assign({}, globalConfig, config, {data: undefined}));
+    const data = viz.data();
+    if (typeof config.data === "string" && data && data.length) {
+
+      const c = assign({}, globalConfig, config);
+      delete c.data;
+      const c2 = assign({}, globalConfig, prevProps.config);
+      delete c2.data;
+
+      const same = forceUpdate ? false : JSON.stringify(c) === JSON.stringify(c2);
+      if (!same) viz.config(c).render();
+
     }
     else if (dataFormat && config.data) {
       viz.config(assign({}, globalConfig, config, {data: []}))
-        .data(config.data, dataFormat);
+        .data(config.data, dataFormat)
+        .render();
     }
     else {
-      viz.config(assign({}, globalConfig, config));
+      viz.config(assign({}, globalConfig, config)).render();
     }
 
     viz.render();
@@ -75,7 +85,10 @@ class Viz extends Component {
 }
 
 Viz.contextTypes = {d3plus: PropTypes.object};
-Viz.defaultProps = {className: "viz"};
+Viz.defaultProps = {
+  className: "viz",
+  forceUpdate: false
+};
 
 /**
     @memberof Viz
