@@ -15,25 +15,22 @@ class Viz extends Component {
       @desc Initializes the specific visualization's class instance and binds it to the container <div>.
       @private
   */
-  constructor(props) {
-    super(props);
-
-    const {type: Constructor} = props;
-
-    this.state = {
-      viz: new Constructor()
-    };
-  }
-
-  /**
-      @memberof Viz
-      @desc Initializes the specific visualization's class instance and binds it to the container <div>.
-      @private
-  */
   componentDidMount() {
-    const {viz} = this.state;
-    viz.select(this.container);
-    this.componentDidUpdate.bind(this)();
+    const {config, dataFormat, type: Constructor} = this.props;
+    const globalConfig = this.context.d3plus || {};
+
+    const viz = new Constructor()
+      .select(this.container);
+
+    if (dataFormat && config.data) {
+      viz.config(assign({}, globalConfig, config, {data: []}))
+        .data(config.data, dataFormat);
+    }
+    else {
+      viz.config(assign({}, globalConfig, config));
+    }
+
+    this.viz = viz.render();
   }
 
   /**
@@ -44,31 +41,19 @@ class Viz extends Component {
   componentDidUpdate(prevProps) {
 
     const globalConfig = this.context.d3plus || {};
-    const {config, dataFormat, forceUpdate} = this.props;
-    const {viz} = this.state;
+    const {config, forceUpdate} = this.props;
+    const {viz} = this;
+    const c = assign({}, globalConfig, config);
+    const c2 = assign({}, globalConfig, prevProps.config);
 
-    const data = viz.data();
-    if (typeof config.data === "string" && data && data.length) {
+    const same = forceUpdate ? false : JSON.stringify(c) === JSON.stringify(c2);
 
-      const c = assign({}, globalConfig, config);
-      delete c.data;
-      const c2 = assign({}, globalConfig, prevProps.config);
-      delete c2.data;
+    if (!same) {
 
-      const same = forceUpdate ? false : JSON.stringify(c) === JSON.stringify(c2);
-      if (!same) viz.config(c).render();
+      if (typeof c.data === "string" && c.data === c2.data) delete c.data;
+      viz.config(c).render();
 
     }
-    else if (dataFormat && config.data) {
-      viz.config(assign({}, globalConfig, config, {data: []}))
-        .data(config.data, dataFormat)
-        .render();
-    }
-    else {
-      viz.config(assign({}, globalConfig, config)).render();
-    }
-
-    viz.render();
 
   }
 
