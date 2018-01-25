@@ -43,17 +43,19 @@ class Viz extends Component {
   */
   componentDidUpdate() {
 
-    const {d3plus} = this.context;
+    const globalConfig = this.context.d3plus || {};
     const {config, dataFormat} = this.props;
     const {viz} = this.state;
 
-    if (dataFormat && config.data) {
-      viz
-        .config(assign({}, d3plus || {}, config, {data: []}))
+    if (viz && viz.data().length) {
+      viz.config(assign({}, globalConfig, config, {data: undefined}));
+    }
+    else if (dataFormat && config.data) {
+      viz.config(assign({}, globalConfig, config, {data: []}))
         .data(config.data, dataFormat);
     }
     else {
-      viz.config(assign({}, d3plus || {}, config));
+      viz.config(assign({}, globalConfig, config));
     }
 
     viz.render();
