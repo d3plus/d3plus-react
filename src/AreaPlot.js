@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class AreaPlot extends Shell {}
-AreaPlot.defaultProps = {type};
+AreaPlot.defaultProps = Object.assign(Shell.defaultProps, {type});
 export default AreaPlot;

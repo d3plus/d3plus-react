@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class Network extends Shell {}
-Network.defaultProps = {type};
+Network.defaultProps = Object.assign(Shell.defaultProps, {type});
 export default Network;

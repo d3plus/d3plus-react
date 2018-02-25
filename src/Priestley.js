@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class Priestley extends Shell {}
-Priestley.defaultProps = {type};
+Priestley.defaultProps = Object.assign(Shell.defaultProps, {type});
 export default Priestley;

@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class Tree extends Shell {}
-Tree.defaultProps = {type};
+Tree.defaultProps = Object.assign(Shell.defaultProps, {type});
 export default Tree;
