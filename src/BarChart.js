@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class BarChart extends Shell {}
-BarChart.defaultProps = {type};
+BarChart.defaultProps = Object.assign(Shell.defaultProps, {type});
 export default BarChart;
