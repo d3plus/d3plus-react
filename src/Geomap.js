@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class Geomap extends Shell {}
-Geomap.defaultProps = Object.assign(Shell.defaultProps, {type});
+Geomap.defaultProps = Object.assign({}, Shell.defaultProps, {type});
 export default Geomap;

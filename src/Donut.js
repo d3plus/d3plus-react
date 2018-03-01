@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class Donut extends Shell {}
-Donut.defaultProps = Object.assign(Shell.defaultProps, {type});
+Donut.defaultProps = Object.assign({}, Shell.defaultProps, {type});
 export default Donut;

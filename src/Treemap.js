@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class Treemap extends Shell {}
-Treemap.defaultProps = Object.assign(Shell.defaultProps, {type});
+Treemap.defaultProps = Object.assign({}, Shell.defaultProps, {type});
 export default Treemap;

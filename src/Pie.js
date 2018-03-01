@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class Pie extends Shell {}
-Pie.defaultProps = Object.assign(Shell.defaultProps, {type});
+Pie.defaultProps = Object.assign({}, Shell.defaultProps, {type});
 export default Pie;

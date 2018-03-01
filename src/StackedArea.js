@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class StackedArea extends Shell {}
-StackedArea.defaultProps = Object.assign(Shell.defaultProps, {type});
+StackedArea.defaultProps = Object.assign({}, Shell.defaultProps, {type});
 export default StackedArea;

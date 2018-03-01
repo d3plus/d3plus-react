@@ -6,5 +6,5 @@ import Shell from "./Viz";
     @extends Viz
 */
 class Plot extends Shell {}
-Plot.defaultProps = Object.assign(Shell.defaultProps, {type});
+Plot.defaultProps = Object.assign({}, Shell.defaultProps, {type});
 export default Plot;
