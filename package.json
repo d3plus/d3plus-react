@@ -43,7 +43,7 @@
     "test": "d3plus-test"
   },
   "devDependencies": {
-    "d3plus-dev": "^0.5.4",
+    "d3plus-dev": "^0.6.0",
     "eslint-plugin-react": "^7.4.0",
     "rollup-plugin-jsx": "^1.0.3"
   },
