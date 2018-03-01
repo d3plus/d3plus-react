@@ -1,8 +1,9 @@
 #! /usr/bin/env node
 
-const asset = require("putasset"),
+const execAsync = require("./execAsync"),
       {execSync} = require("child_process"),
-      release = require("grizzly"),
+      fs = require("fs"),
+      github = require("@octokit/rest")(),
       shell = require("shelljs"),
       token = shell.env.GITHUB_TOKEN,
       {name, version} = JSON.parse(shell.cat("package.json"));
@@ -17,106 +18,82 @@ minor = minor.slice(0, minor.length - 1).join(".");
 execSync("npm test", {stdio: "inherit"});
 execSync("npm run build", {stdio: "inherit"});
 
-function kill(code, stdout) {
-  log.fail();
-  shell.echo(stdout);
-  shell.exit(code);
-}
-
+/**
+    Final steps for release.
+    @private
+**/
 function finishRelease() {
 
-  log.timer("compiling examples");
-  shell.exec("npm run examples", (code, stdout) => {
-    if (code) kill(code, stdout);
+  log.done();
+  execSync("npm run examples", {stdio: "inherit"});
+  execSync("npm run docs", {stdio: "inherit"});
+  let commits = "", releaseUrl = "", zipSize = 0;
 
-    log.timer("compiling documentation");
-    shell.exec("npm run docs", (code, stdout) => {
-      if (code) kill(code, stdout);
+  log.timer("compiling release notes");
+  execAsync("git log --pretty=format:'* %s (%h)' `git describe --tags --abbrev=0`...HEAD")
+    .then(stdout => {
+      commits = stdout;
+      log.timer("publishing npm package");
+      return execAsync("npm publish ./");
+    })
+    .then(() => {
+      log.timer("commiting all modified files for release");
+      return execAsync("git add --all");
+    })
+    .then(() => execAsync(`git commit -m \"compiles v${version}\"`))
+    .then(() => {
+      log.timer("tagging latest commit");
+      return execAsync(`git tag v${version}`);
+    })
+    .then(() => {
+      log.timer("pushing to repository");
+      return execAsync("git push origin --follow-tags");
+    })
+    .then(() => {
+      log.timer("publishing release notes");
+      github.authenticate({type: "oauth", token});
+      return github.repos.createRelease({
+        owner: "d3plus",
+        repo: name,
+        tag_name: `v${version}`,
+        name: `v${version}`,
+        body: commits,
+        prerelease
+      });
+    })
+    .then(() => {
+      log.timer("attaching .zip distribution to release");
+      return github.repos.getReleaseByTag({
+        owner: "d3plus",
+        repo: name,
+        tag: `v${version}`
+      });
+    })
+    .then(release => {
+      releaseUrl = release.data.upload_url;
+      zipSize = fs.statSync(`build/${name}.zip`).size;
 
-      log.timer("compiling release notes");
-      shell.exec("git log --pretty=format:'* %s (%h)' `git describe --tags --abbrev=0`...HEAD", (code, stdout) => {
-        const body = stdout;
-
-        log.timer("publishing npm package");
-        shell.exec("npm publish ./", (code, stdout) => {
-          if (code) kill(code, stdout);
-
-          log.timer("commiting all modified files for release");
-          shell.exec("git add --all", (code, stdout) => {
-            if (code) kill(code, stdout);
-
-            shell.exec(`git commit -m \"compiles v${version}\"`, (code, stdout) => {
-              if (code) kill(code, stdout);
-
-              log.timer("tagging latest commit");
-              shell.exec(`git tag v${version}`, (code, stdout) => {
-                if (code) kill(code, stdout);
-
-                log.timer("pushing to repository");
-                shell.exec("git push origin --follow-tags", (code, stdout) => {
-                  if (code) kill(code, stdout);
-
-                  log.timer("publishing release notes");
-                  release(token, {
-                    repo: name,
-                    user: "d3plus",
-                    tag: `v${version}`,
-                    name: `v${version}`,
-                    body, prerelease
-                  }, error => {
-                    if (error) {
-                      log.fail();
-                      shell.echo(`repo: ${name}`);
-                      shell.echo(`tag/name: v${version}`);
-                      shell.echo(`body: ${body}`);
-                      shell.echo(`prerelease: ${prerelease}`);
-                      shell.echo(error.message);
-                      shell.exit(1);
-                    }
-                    else {
-
-                      if (shell.test("-f", `build/${name}.zip`)) {
-                        log.timer("attaching .zip distribution to release");
-                        asset(token, {
-                          repo: name,
-                          owner: "d3plus",
-                          tag: `v${version}`,
-                          filename: `build/${name}.zip`
-                        }, error => {
-                          if (error) {
-                            log.fail();
-                            shell.echo(error.message);
-                            shell.exit(1);
-                          }
-                          else {
-                            log.exit();
-                            shell.exit(0);
-                          }
-                        });
-                      }
-                      else {
-                        log.exit();
-                        shell.exit(0);
-                      }
-
-                    }
-                  });
-
-                });
-
-              });
-
-            });
-
-          });
-
-        });
-
+      return github.repos.uploadAsset({
+        url: releaseUrl,
+        file: fs.createReadStream(`build/${name}.zip`),
+        contentType: "application/zip",
+        contentLength: zipSize,
+        name: `${name}.zip`,
+        label: `${name}.zip`,
+        owner: "d3plus",
+        repo: name
       });
 
+    })
+    .then(() => {
+      log.exit();
+      shell.exit(0);
+    })
+    .catch(err => {
+      log.fail(err);
+      log.exit();
+      shell.exit(1);
     });
-
-  });
 
 }
 
@@ -125,23 +102,17 @@ if (shell.test("-d", "../d3plus-website")) {
   shell.cp(`build/${name}.js`, `../d3plus-website/js/${name}.v${minor}.js`);
   shell.cp(`build/${name}.min.js`, `../d3plus-website/js/${name}.v${minor}.min.js`);
   shell.cd("../d3plus-website");
-  shell.exec(`git add js/${name}.v${minor}.js js/${name}.v${minor}.min.js`, (code, stdout) => {
-    if (code) kill(code, stdout);
-
-    shell.exec(`git commit -m \"${name} v${version}\"`, (code, stdout) => {
-      if (code) kill(code, stdout);
-
-      shell.exec("git push", (code, stdout) => {
-        if (code) kill(code, stdout);
-
-        shell.cd("-");
-        finishRelease();
-
-      });
-
+  execAsync(`git add js/${name}.v${minor}.js js/${name}.v${minor}.min.js`)
+    .then(() => execAsync(`git commit -m \"${name} v${version}\"`))
+    .then(() => execAsync("git push"))
+    .then(() => {
+      shell.cd(`../${name}`);
+      finishRelease();
+    })
+    .catch(() => {
+      shell.cd(`../${name}`);
+      finishRelease();
     });
-
-  });
 }
 else {
   log.done();
