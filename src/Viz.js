@@ -16,21 +16,11 @@ class Viz extends Component {
       @private
   */
   componentDidMount() {
-    const {config, dataFormat, type: Constructor} = this.props;
-    const globalConfig = this.context.d3plus || {};
+    const {type: Constructor} = this.props;
 
-    const viz = new Constructor()
-      .select(this.container);
+    this.viz = new Constructor().select(this.container);
+    this.renderViz.bind(this)();
 
-    if (dataFormat && config.data) {
-      viz.config(assign({}, globalConfig, config, {data: []}))
-        .data(config.data, dataFormat);
-    }
-    else {
-      viz.config(assign({}, globalConfig, config));
-    }
-
-    this.viz = viz.render();
   }
 
   /**
@@ -42,18 +32,28 @@ class Viz extends Component {
 
     const globalConfig = this.context.d3plus || {};
     const {config, forceUpdate} = this.props;
-    const {viz} = this;
     const c = assign({}, globalConfig, config);
     const c2 = assign({}, globalConfig, prevProps.config);
 
     const same = forceUpdate ? false : JSON.stringify(c) === JSON.stringify(c2);
+    if (!same) this.renderViz.bind(this)();
 
-    if (!same) {
+  }
 
-      if (typeof c.data === "string" && c.data === c2.data) delete c.data;
-      viz.config(c).render();
+  /**
+      @memberof Viz
+      @desc Sets visualization config, accounting for dataFormat, and renders the visualization.
+      @private
+  */
+  renderViz() {
+    const {viz} = this;
+    const {config, dataFormat} = this.props;
+    const globalConfig = this.context.d3plus || {};
+    const c = assign({}, globalConfig, config);
 
-    }
+    if (dataFormat && c.data) viz.config(c).data(c.data, dataFormat);
+    else viz.config(c);
+    viz.render();
 
   }
 
