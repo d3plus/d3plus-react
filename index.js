@@ -1,5 +1,6 @@
 export {default as AreaPlot} from "./src/AreaPlot";
 export {default as BarChart} from "./src/BarChart";
+export {default as BumpChart} from "./src/BumpChart";
 export {default as Donut} from "./src/Donut";
 export {default as Geomap} from "./src/Geomap";
 export {default as LinePlot} from "./src/LinePlot";
