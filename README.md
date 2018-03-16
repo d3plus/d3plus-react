@@ -40,6 +40,7 @@ export default {
 ##### 
 * [AreaPlot](#AreaPlot)
 * [BarChart](#BarChart)
+* [BumpChart](#BumpChart)
 * [Donut](#Donut)
 * [Geomap](#Geomap)
 * [LinePlot](#LinePlot)
@@ -64,6 +65,14 @@ This is a global class, and extends all of the methods and functionality of [<co
 
 <a name="BarChart"></a>
 #### **BarChart** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BarChart.js#L4)
+
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
+<a name="BumpChart"></a>
+#### **BumpChart** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BumpChart.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -183,4 +192,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Tue, 13 Mar 2018 21:06:57 GMT</sub>
+###### <sub>Documentation generated on Fri, 16 Mar 2018 18:13:27 GMT</sub>
