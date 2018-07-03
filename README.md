@@ -48,6 +48,8 @@ export default {
 * [Pie](#Pie)
 * [Plot](#Plot)
 * [Priestley](#Priestley)
+* [Rings](#Rings)
+* [Sankey](#Sankey)
 * [StackedArea](#StackedArea)
 * [Tree](#Tree)
 * [Treemap](#Treemap)
@@ -135,6 +137,22 @@ This is a global class, and extends all of the methods and functionality of [<co
 
 ---
 
+<a name="Rings"></a>
+#### **Rings** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Rings.js#L4)
+
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
+<a name="Sankey"></a>
+#### **Sankey** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Sankey.js#L4)
+
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="StackedArea"></a>
 #### **StackedArea** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/StackedArea.js#L4)
 
@@ -192,4 +210,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Tue, 10 Apr 2018 19:35:05 GMT</sub>
+###### <sub>Documentation generated on Tue, 03 Jul 2018 16:41:01 GMT</sub>
