@@ -8,6 +8,7 @@ export {default as Network} from "./src/Network";
 export {default as Pie} from "./src/Pie";
 export {default as Plot} from "./src/Plot";
 export {default as Priestley} from "./src/Priestley";
+export {default as Sankey} from "./src/Sankey";
 export {default as StackedArea} from "./src/StackedArea";
 export {default as Tree} from "./src/Tree";
 export {default as Treemap} from "./src/Treemap";
