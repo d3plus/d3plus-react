@@ -1,5 +1,7 @@
 # d3plus-react
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/d3plus/d3plus-react.svg)](https://greenkeeper.io/)
+
 [![NPM Release](http://img.shields.io/npm/v/d3plus-react.svg?style=flat)](https://www.npmjs.org/package/d3plus-react)
 [![Build Status](https://travis-ci.org/d3plus/d3plus-react.svg?branch=master)](https://travis-ci.org/d3plus/d3plus-react)
 [![Dependency Status](http://img.shields.io/david/d3plus/d3plus-react.svg?style=flat)](https://david-dm.org/d3plus/d3plus-react)
