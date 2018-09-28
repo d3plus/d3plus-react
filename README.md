@@ -45,6 +45,7 @@ export default {
 * [Geomap](#Geomap)
 * [LinePlot](#LinePlot)
 * [Network](#Network)
+* [Pack](#Pack)
 * [Pie](#Pie)
 * [Plot](#Plot)
 * [Priestley](#Priestley)
@@ -107,6 +108,14 @@ This is a global class, and extends all of the methods and functionality of [<co
 
 <a name="Network"></a>
 #### **Network** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Network.js#L4)
+
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
+<a name="Pack"></a>
+#### **Pack** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Pack.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -210,4 +219,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Tue, 03 Jul 2018 16:41:01 GMT</sub>
+###### <sub>Documentation generated on Fri, 28 Sep 2018 17:37:47 GMT</sub>
