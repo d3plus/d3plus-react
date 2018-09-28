@@ -5,6 +5,7 @@ export {default as Donut} from "./src/Donut";
 export {default as Geomap} from "./src/Geomap";
 export {default as LinePlot} from "./src/LinePlot";
 export {default as Network} from "./src/Network";
+export {default as Pack} from "./src/Pack";
 export {default as Pie} from "./src/Pie";
 export {default as Plot} from "./src/Plot";
 export {default as Priestley} from "./src/Priestley";
