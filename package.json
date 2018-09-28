@@ -25,7 +25,7 @@
   "dependencies": {
     "d3plus-common": "^0.6.43",
     "d3plus-geomap": "^0.6.0",
-    "d3plus-hierarchy": "^0.6.3",
+    "d3plus-hierarchy": "^0.8.0",
     "d3plus-network": "^0.5.1",
     "d3plus-plot": "^0.8.0",
     "d3plus-priestley": "^0.3.0",
