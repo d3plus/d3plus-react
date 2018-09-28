@@ -30,8 +30,8 @@
     "d3plus-plot": "^0.8.0",
     "d3plus-priestley": "^0.3.0",
     "d3plus-viz": "^0.12.3",
-    "prop-types": "^15.6.1",
-    "react": "^15.6.1"
+    "prop-types": "^15.6.2",
+    "react": "^15.6.2"
   },
   "scripts": {
     "build": "node bin/build",
@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "d3plus-dev": "^0.6.9",
-    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-react": "^7.11.1",
     "rollup-plugin-jsx": "^1.0.3"
   },
   "module": "es/index",
