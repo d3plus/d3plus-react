@@ -7,6 +7,8 @@
   "parserOptions": {
     "sourceType": "module"
   },
+  "plugins": ["react"],
+  "extends": ["plugin:react/recommended"],
   "rules": {
     "array-bracket-spacing": 2,
     "arrow-body-style": 2,
@@ -128,6 +130,7 @@
     ],
     "quotes": 2,
     "radix": 2,
+    "react/prop-types": 0,
     "require-jsdoc": 2,
     "require-yield": 2,
     "semi": 2,
