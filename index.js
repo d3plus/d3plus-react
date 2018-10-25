@@ -9,6 +9,7 @@ export {default as Pack} from "./src/Pack";
 export {default as Pie} from "./src/Pie";
 export {default as Plot} from "./src/Plot";
 export {default as Priestley} from "./src/Priestley";
+export {default as Radar} from "./src/Radar";
 export {default as Rings} from "./src/Rings";
 export {default as Sankey} from "./src/Sankey";
 export {default as StackedArea} from "./src/StackedArea";
