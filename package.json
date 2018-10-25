@@ -27,9 +27,9 @@
     "d3plus-geomap": "^0.6.0",
     "d3plus-hierarchy": "^0.8.0",
     "d3plus-network": "^0.5.1",
-    "d3plus-plot": "^0.8.0",
+    "d3plus-plot": "^0.8.1",
     "d3plus-priestley": "^0.3.0",
-    "d3plus-viz": "^0.12.3",
+    "d3plus-viz": "^0.12.4",
     "prop-types": "^15.6.2",
     "react": "^15.6.2"
   },
