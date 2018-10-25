@@ -49,6 +49,7 @@ export default {
 * [Pie](#Pie)
 * [Plot](#Plot)
 * [Priestley](#Priestley)
+* [Radar](#Radar)
 * [Rings](#Rings)
 * [Sankey](#Sankey)
 * [StackedArea](#StackedArea)
@@ -146,6 +147,14 @@ This is a global class, and extends all of the methods and functionality of [<co
 
 ---
 
+<a name="Radar"></a>
+#### **Radar** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Radar.js#L4)
+
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Rings"></a>
 #### **Rings** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Rings.js#L4)
 
@@ -219,4 +228,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Fri, 28 Sep 2018 17:37:47 GMT</sub>
+###### <sub>Documentation generated on Thu, 25 Oct 2018 21:42:12 GMT</sub>
