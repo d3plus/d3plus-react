@@ -48,6 +48,7 @@
     "rollup-plugin-jsx": "^1.0.3"
   },
   "module": "es/index",
+  "sideEffects": false,
   "files": [
     "bin",
     "build/d3plus-react.js",
