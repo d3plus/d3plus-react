@@ -47,6 +47,8 @@
   "devDependencies": {
     "d3plus-dev": "^0.6.18",
     "eslint-plugin-react": "^7.11.1",
+    "prop-types": "^15.6.2",
+    "react": "^15.6.2",
     "rollup-plugin-jsx": "^1.0.3"
   },
   "module": "es/index",
