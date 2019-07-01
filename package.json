@@ -23,13 +23,13 @@
     "url": "http://www.dave-landry.com"
   },
   "dependencies": {
-    "d3plus-common": "^0.6.45",
+    "d3plus-common": "^0.6.49",
     "d3plus-geomap": "^0.6.2",
-    "d3plus-hierarchy": "^0.8.1",
-    "d3plus-network": "^0.5.3",
-    "d3plus-plot": "^0.8.7",
+    "d3plus-hierarchy": "^0.8.5",
+    "d3plus-network": "^0.5.6",
+    "d3plus-plot": "^0.8.12",
     "d3plus-priestley": "^0.3.2",
-    "d3plus-viz": "^0.12.12"
+    "d3plus-viz": "^0.12.33"
   },
   "peerDependencies": {
     "prop-types": "^15.6.2",
