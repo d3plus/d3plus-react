@@ -29,7 +29,9 @@
     "d3plus-network": "^0.5.3",
     "d3plus-plot": "^0.8.7",
     "d3plus-priestley": "^0.3.2",
-    "d3plus-viz": "^0.12.12",
+    "d3plus-viz": "^0.12.12"
+  },
+  "peerDependencies": {
     "prop-types": "^15.6.2",
     "react": "^15.6.2"
   },
