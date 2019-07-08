@@ -51,12 +51,13 @@ class Viz extends Component {
     const globalConfig = this.context.d3plus || {};
     const c = assign({}, globalConfig, config);
 
-    if (dataFormat && c.data) viz.config(c).data(c.data, dataFormat);
-    if (linksFormat && c.links) viz.config(c).links(c.data, linksFormat);
-    if (nodesFormat && c.nodes) viz.config(c).nodes(c.data, nodesFormat);
-    if (topojsonFormat && c.nodes) viz.config(c).topojson(c.data, topojsonFormat);
+    viz.config(c);
 
-    else viz.config(c);
+    if (dataFormat && c.data) viz.data(c.data, dataFormat);
+    if (linksFormat && c.links) viz.links(c.links, linksFormat);
+    if (nodesFormat && c.nodes) viz.nodes(c.nodes, nodesFormat);
+    if (topojsonFormat && c.topojson) viz.topojson(c.topojson, topojsonFormat);
+
     viz.render();
 
   }
