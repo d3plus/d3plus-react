@@ -42,7 +42,7 @@ class Viz extends Component {
 
   /**
       @memberof Viz
-      @desc Sets visualization config, accounting for dataFormat, linksFormat or nodesFormat, and renders the visualization.
+      @desc Sets visualization config, accounting for dataFormat, linksFormat, nodesFormat or topojsonFormat, and renders the visualization.
       @private
   */
   renderViz() {
