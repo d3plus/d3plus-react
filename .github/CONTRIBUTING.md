@@ -19,7 +19,7 @@ And that's it! Now your environment should be all set up and ready to go.
 
 ## Writing Code
 
-With the introduction of modules in D3plus 2.0, all code is transpiled using [buble](http://buble.surge.sh/), which allows usage of most of the good bits from ES6. If you are unfamiliar with ES6, then normal vanilla javascript works fine as well (but we may suggest PR revisions to include more succinct ES6). All source code lives in the `./src` directory.
+With the introduction of modules in D3plus 2.0, all code is transpiled using [babel](https://babeljs.io/), which allows usage of most of the good bits from ES6. If you are unfamiliar with ES6, then normal vanilla javascript works fine as well (but we may suggest PR revisions to include more succinct ES6). All source code lives in the `./src` directory.
 
 ## Code Style
 
@@ -67,10 +67,10 @@ npm test
 ```
 > This command will also lint all files according to the provided `.eslintc` file.
 
-D3plus uses [zora]() for running tests, and [tape-run] for outputting the results. Here is an example of what a test file could look like:
+D3plus uses [zora](https://github.com/lorenzofox3/zora) for running tests, and [tape-run](https://github.com/juliangruber/tape-run) for outputting the results. Here is an example of what a test file could look like:
 
 ```js
-import test from "zora";
+import {test} from "zora";
 
 test("testing booleans", assert => {
 
