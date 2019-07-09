@@ -215,7 +215,7 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 
 
 
-<a name="Viz.module.exports" href="#Viz.module.exports">#</a> Viz.**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L83)
+<a name="Viz.module.exports" href="#Viz.module.exports">#</a> Viz.**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L91)
 
 
 This is a static property of [<code>Viz</code>](#Viz).
@@ -224,8 +224,11 @@ This is a static property of [<code>Viz</code>](#Viz).
 | --- | --- | --- | --- |
 | [config] | <code>Object</code> | <code>{}</code> | An object containing method/value pairs to be passed to the visualization's .config( ) method. |
 | [dataFormat] | <code>function</code> | <code>d3plus.dataFold</code> | A custom formatting function to be used when formatting data from an AJAX request. The function will be passed the raw data returned from the request, and is expected to return an array of values used for the data method. |
+| [linksFormat] | <code>function</code> | <code>d3plus.links(path, formatter)</code> | A custom formatting function to be used when formatting links from an AJAX request. The function will be passed the raw data returned from the request, and is expected to return an array of values used for the links method. |
+| [nodesFormat] | <code>function</code> | <code>d3plus.nodes(path, formatter)</code> | A custom formatting function to be used when formatting nodes from an AJAX request. The function will be passed the raw data returned from the request, and is expected to return an array of values used for the nodes method. |
+| [topojsonFormat] | <code>function</code> | <code>d3plus.topojson(path, formatter)</code> | A custom formatting function to be used when formatting topojson from an AJAX request. The function will be passed the raw data returned from the request, and is expected to return an array of values used for the topojson method. |
 
 
 ---
 
-###### <sub>Documentation generated on Mon, 01 Jul 2019 21:58:55 GMT</sub>
+###### <sub>Documentation generated on Tue, 09 Jul 2019 18:05:42 GMT</sub>
