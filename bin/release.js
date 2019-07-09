@@ -1,12 +1,13 @@
 #! /usr/bin/env node
 
-const execAsync = require("./execAsync"),
+const Octokit = require("@octokit/rest"),
+      execAsync = require("./execAsync"),
       {execSync} = require("child_process"),
-      github = require("@octokit/rest")(),
       shell = require("shelljs"),
       token = shell.env.GITHUB_TOKEN,
       {name, version} = JSON.parse(shell.cat("package.json"));
 
+const github = new Octokit({auth: token});
 shell.config.silent = true;
 const log = require("../node_modules/d3plus-dev/bin/log")(`release v${version}`);
 
