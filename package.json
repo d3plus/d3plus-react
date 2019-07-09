@@ -2,7 +2,7 @@
   "name": "d3plus-react",
   "version": "0.5.4",
   "description": "React components for d3plus visualizations.",
-  "main": "build/d3plus-react.js",
+  "main": "es/index.js",
   "jsnext:main": "es/index",
   "license": "MIT",
   "homepage": "https://d3plus.org",
@@ -36,11 +36,8 @@
     "react": "^15.6.2"
   },
   "scripts": {
-    "build": "node bin/build",
     "docs": "node bin/docs",
-    "dev": "d3plus-dev",
     "env": "d3plus-env",
-    "examples": "d3plus-examples",
     "release": "node bin/release",
     "test": "d3plus-test"
   },
@@ -48,16 +45,12 @@
     "d3plus-dev": "^0.7.1",
     "eslint-plugin-react": "^7.11.1",
     "prop-types": "^15.6.2",
-    "react": "^15.6.2",
-    "rollup-plugin-jsx": "^1.0.3"
+    "react": "^15.6.2"
   },
   "module": "es/index",
   "sideEffects": false,
   "files": [
     "bin",
-    "build/d3plus-react.js",
-    "build/d3plus-react.js.map",
-    "build/d3plus-react.min.js",
     "es"
   ]
 }
