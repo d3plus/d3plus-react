@@ -42,7 +42,6 @@ execAsync("git log --pretty=format:'* %s (%h)' `git describe --tags --abbrev=0`.
   })
   .then(() => {
     log.timer("publishing release notes");
-    github.authenticate({type: "oauth", token});
     return github.repos.createRelease({
       owner: "d3plus",
       repo: name,
