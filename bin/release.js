@@ -1,8 +1,11 @@
 #! /usr/bin/env node
 
 const Octokit = require("@octokit/rest"),
+      babel = require("@babel/core"),
       execAsync = require("./execAsync"),
       {execSync} = require("child_process"),
+      fs = require("fs"),
+      path = require("path"),
       shell = require("shelljs"),
       token = shell.env.GITHUB_TOKEN,
       {name, version} = JSON.parse(shell.cat("package.json"));
@@ -18,9 +21,30 @@ minor = minor.slice(0, minor.length - 1).join(".");
 execSync("npm test", {stdio: "inherit"});
 log.done();
 execSync("npm run docs", {stdio: "inherit"});
-let commits = "";
+
+log.timer("transpiling ES6 for modules");
+shell.rm("-rf", "es");
+shell.mkdir("-p", "es");
+
+const babelRC = JSON.parse(shell.cat(path.join(process.cwd(), "node_modules/d3plus-dev/bin/.babelrc")));
+babelRC.presets.push("@babel/preset-react");
+
+shell.ls("-R", "src/**/*.js").concat(["index.js"])
+  .forEach(file => {
+    const {code} = babel.transformFileSync(file, babelRC);
+    file.split("/")
+      .filter(name => !name.includes("."))
+      .reduce((dir, folder) => {
+        dir = path.join(dir, folder);
+        !fs.existsSync(dir) && fs.mkdirSync(dir);
+        return dir;
+      }, "es/");
+    fs.writeFileSync(`es/${file}`, code);
+  });
 
 log.timer("compiling release notes");
+let commits = "";
+
 execAsync("git log --pretty=format:'* %s (%h)' `git describe --tags --abbrev=0`...HEAD")
   .then(stdout => {
     commits = stdout;
