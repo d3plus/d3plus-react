@@ -35,6 +35,33 @@ export default {
 };
 ```
 
+## Update Cycle
+
+In order to detect whether a component _should_ udpate in React, each component does a rudimentary check between the current `config` object and the incoming new `config` object. This is done via a simple equality check on the stringified versions of each object. This can also be overridded using the `forceUpdate` prop:
+
+```js
+const shouldUpdate = this.props.forceUpdate ? false : JSON.stringify(oldConfig) === JSON.stringify(newConfig);
+```
+
+This works in _most_ cases, but may not update your visualizations if using an accessor function that references an external variable. For example, if your `x` accessor is:
+
+```jsx
+const config = {
+  ...,
+  x: d => d[xVar]
+};
+```
+
+...and `xVar` changes, the visualization will not update. The quick "hack" for this is add `xVar` to the config object so that it triggers the update via stringify:
+
+```jsx
+const config = {
+  ...,
+  x: d => d[xVar],
+  xVar
+};
+```
+
 ## API Reference
 
 ##### 
@@ -231,4 +258,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Mon, 22 Jul 2019 17:58:24 GMT</sub>
+###### <sub>Documentation generated on Fri, 27 Sep 2019 17:26:26 GMT</sub>
