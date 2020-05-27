@@ -32,8 +32,8 @@
     "d3plus-viz": "^0.12.51"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^15.6.2"
+    "prop-types": ">=15.6.2",
+    "react": ">=15.6.2"
   },
   "scripts": {
     "docs": "node bin/docs",
@@ -45,8 +45,8 @@
     "@babel/preset-react": "^7.0.0",
     "d3plus-dev": "^0.7.4",
     "eslint-plugin-react": "^7.11.1",
-    "prop-types": "^15.6.2",
-    "react": "^15.6.2"
+    "prop-types": ">=15.6.2",
+    "react": ">=15.6.2"
   },
   "module": "es/index",
   "sideEffects": false,
