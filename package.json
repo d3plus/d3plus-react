@@ -1,6 +1,6 @@
 {
   "name": "d3plus-react",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "React components for d3plus visualizations.",
   "main": "es/index.js",
   "jsnext:main": "es/index",
