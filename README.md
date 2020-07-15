@@ -258,4 +258,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Tue, 02 Jun 2020 13:54:57 GMT</sub>
+###### <sub>Documentation generated on Wed, 15 Jul 2020 15:29:51 GMT</sub>
