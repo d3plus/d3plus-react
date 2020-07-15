@@ -23,13 +23,13 @@
     "url": "http://www.dave-landry.com"
   },
   "dependencies": {
-    "d3plus-common": "^0.6.60",
-    "d3plus-geomap": "^0.6.12",
-    "d3plus-hierarchy": "^0.8.10",
-    "d3plus-network": "^0.5.11",
-    "d3plus-plot": "^0.8.36",
-    "d3plus-priestley": "^0.3.5",
-    "d3plus-viz": "^0.12.51"
+    "d3plus-common": "^0.7.0",
+    "d3plus-geomap": "^0.7.0",
+    "d3plus-hierarchy": "^0.9.0",
+    "d3plus-network": "^0.6.0",
+    "d3plus-plot": "^0.9.0",
+    "d3plus-priestley": "^0.4.0",
+    "d3plus-viz": "^0.13.1"
   },
   "peerDependencies": {
     "prop-types": ">=15.6.2",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
-    "d3plus-dev": "^0.7.4",
+    "d3plus-dev": "^0.7.6",
     "eslint-plugin-react": "^7.11.1",
     "prop-types": ">=15.6.2",
     "react": ">=15.6.2"
