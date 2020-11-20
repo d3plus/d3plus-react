@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-const Octokit = require("@octokit/rest"),
+const {Octokit} = require("@octokit/rest"),
       babel = require("@babel/core"),
       execAsync = require("./execAsync"),
       {execSync} = require("child_process"),
