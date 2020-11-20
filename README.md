@@ -71,12 +71,14 @@ const config = {
 * [Donut](#Donut)
 * [Geomap](#Geomap)
 * [LinePlot](#LinePlot)
+* [Matrix](#Matrix)
 * [Network](#Network)
 * [Pack](#Pack)
 * [Pie](#Pie)
 * [Plot](#Plot)
 * [Priestley](#Priestley)
 * [Radar](#Radar)
+* [RadialMatrix](#RadialMatrix)
 * [Rings](#Rings)
 * [Sankey](#Sankey)
 * [StackedArea](#StackedArea)
@@ -134,6 +136,14 @@ This is a global class, and extends all of the methods and functionality of [<co
 
 ---
 
+<a name="Matrix"></a>
+#### **Matrix** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Matrix.js#L4)
+
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
 <a name="Network"></a>
 #### **Network** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Network.js#L4)
 
@@ -176,6 +186,14 @@ This is a global class, and extends all of the methods and functionality of [<co
 
 <a name="Radar"></a>
 #### **Radar** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Radar.js#L4)
+
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
+<a name="RadialMatrix"></a>
+#### **RadialMatrix** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/RadialMatrix.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
@@ -258,4 +276,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Wed, 15 Jul 2020 15:29:51 GMT</sub>
+###### <sub>Documentation generated on Fri, 20 Nov 2020 15:51:53 GMT</sub>
