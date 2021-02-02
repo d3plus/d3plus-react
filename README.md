@@ -3,13 +3,17 @@
 [![NPM Release](http://img.shields.io/npm/v/d3plus-react.svg?style=flat)](https://www.npmjs.org/package/d3plus-react)
 [![Build Status](https://travis-ci.org/d3plus/d3plus-react.svg?branch=master)](https://travis-ci.org/d3plus/d3plus-react)
 [![Dependency Status](http://img.shields.io/david/d3plus/d3plus-react.svg?style=flat)](https://david-dm.org/d3plus/d3plus-react)
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat)](https://gitter.im/d3plus/)
+[![Gitter](https://img.shields.io/badge/-chat_on_gitter-brightgreen.svg?style=flat&logo=gitter-white)](https://gitter.im/d3plus/)
 
 React components for d3plus visualizations.
 
 ## Installing
 
-Use `npm install d3plus-react -S` to install the package as a dependency. And then use the components in your React project like this:
+Use `npm install d3plus-react -S` to install the package as a dependency.
+
+## Configuration
+
+A valid d3plus `config` _Object_ needs to be provided to the `config` prop of every visualization.
 
 ```jsx
 import {Treemap} from "d3plus-react";
@@ -26,12 +30,34 @@ const methods = {
 <Treemap config={methods} />
 ```
 
-Additionally, a file named `.d3plus.js` needs to exist in the root path of your project. This file should contain all global styles to be applied to the visualizations (passed to the .config( ) method). Here is an example that makes all of your visualizations use the best font ever created:
-```js
-export default {
-  shapeConfig: {
-    fontFamily: "Comic Sans MS"
+Additionally, a global set of styles can be provided using the "d3plus" React context key. This allows you to set base styles on all of your visualizations in one place, often in an external file. A component's `config` set by props will override global defaults key-by-key using a deep cloning function.
+```jsx
+import React, {Component} from "react";
+
+export default class MyApp extends Component {
+
+  render() {
+
+    getChildContext() {
+      return {
+        d3plus: {
+          shapeConfig: {
+            fontFamily: "Comic Sans MS"
+          }
+        }
+      };
+    }
+
+    return (
+      <main>
+        {/* child components containing visualizations */}
+      </main>
+    );
   }
+}
+
+MyApp.childContextTypes = {
+  d3plus: PropTypes.object
 };
 ```
 
@@ -276,4 +302,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Fri, 20 Nov 2020 15:51:53 GMT</sub>
+###### <sub>Documentation generated on Tue, 02 Feb 2021 00:36:28 GMT</sub>
