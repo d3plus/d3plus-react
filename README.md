@@ -36,24 +36,28 @@ import React, {Component} from "react";
 
 export default class MyApp extends Component {
 
-  render() {
+  getChildContext() {
 
-    getChildContext() {
-      return {
-        d3plus: {
-          shapeConfig: {
-            fontFamily: "Comic Sans MS"
-          }
+    return {
+      d3plus: {
+        shapeConfig: {
+          fontFamily: "Comic Sans MS"
         }
-      };
-    }
+      }
+    };
+
+  }
+
+  render() {
 
     return (
       <main>
         {/* child components containing visualizations */}
       </main>
     );
+
   }
+
 }
 
 MyApp.childContextTypes = {
@@ -302,4 +306,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Tue, 02 Feb 2021 00:36:28 GMT</sub>
+###### <sub>Documentation generated on Wed, 03 Feb 2021 23:55:15 GMT</sub>
