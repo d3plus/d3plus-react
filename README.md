@@ -97,6 +97,7 @@ const config = {
 ##### 
 * [AreaPlot](#AreaPlot)
 * [BarChart](#BarChart)
+* [BoxWhisker](#BoxWhisker)
 * [BumpChart](#BumpChart)
 * [Donut](#Donut)
 * [Geomap](#Geomap)
@@ -128,6 +129,14 @@ This is a global class, and extends all of the methods and functionality of [<co
 
 <a name="BarChart"></a>
 #### **BarChart** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BarChart.js#L4)
+
+
+This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
+<a name="BoxWhisker"></a>
+#### **BoxWhisker** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BoxWhisker.js#L4)
 
 
 This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
