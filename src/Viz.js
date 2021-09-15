@@ -17,6 +17,7 @@ class Viz extends Component {
   */
   componentDidMount() {
     const {type: Constructor} = this.props;
+    this.prevGlobalConfig = this.context.d3plus || {};
 
     this.viz = new Constructor().select(this.container);
     this.renderViz.bind(this)();
@@ -33,7 +34,8 @@ class Viz extends Component {
     const globalConfig = this.context.d3plus || {};
     const {config, forceUpdate} = this.props;
     const c = assign({}, globalConfig, config);
-    const c2 = assign({}, globalConfig, prevProps.config);
+    const c2 = assign({}, this.prevGlobalConfig, prevProps.config);
+    this.prevGlobalConfig = globalConfig;
 
     const same = forceUpdate ? false : JSON.stringify(c) === JSON.stringify(c2);
     if (!same) this.renderViz.bind(this)();
