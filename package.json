@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.12.13",
-    "d3plus-dev": "^1.0.1",
+    "d3plus-dev": "^1.1.0",
     "eslint-plugin-react": "^7.22.0",
     "prop-types": ">=15.6.2",
     "react": "^17.0.1"
