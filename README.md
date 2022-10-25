@@ -99,6 +99,7 @@ const config = {
 * [BarChart](#BarChart)
 * [BoxWhisker](#BoxWhisker)
 * [BumpChart](#BumpChart)
+* [D3plusContext](#D3plusContext) - A React context instance used to provide global config options via a provider (D3plusContext.Provider).
 * [Donut](#Donut)
 * [Geomap](#Geomap)
 * [LinePlot](#LinePlot)
@@ -115,191 +116,190 @@ const config = {
 * [StackedArea](#StackedArea)
 * [Tree](#Tree)
 * [Treemap](#Treemap)
-* [Viz](#Viz)
+* [Viz](#Viz) - Creates SVG paths and coordinate points based on an array of data. See [this example](https://d3plus.org/examples/d3plus-geomap/getting-started/) for help getting started using the geomap generator.
 
 ---
 
 <a name="AreaPlot"></a>
-#### **AreaPlot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/AreaPlot.js#L4)
+#### d3plus.**AreaPlot**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/AreaPlot.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="BarChart"></a>
-#### **BarChart** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BarChart.js#L4)
+#### d3plus.**BarChart**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BarChart.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="BoxWhisker"></a>
-#### **BoxWhisker** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BoxWhisker.js#L4)
+#### d3plus.**BoxWhisker**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BoxWhisker.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="BumpChart"></a>
-#### **BumpChart** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BumpChart.js#L4)
+#### d3plus.**BumpChart**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/BumpChart.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+
+---
+
+<a name="D3plusContext"></a>
+#### d3plus.**D3plusContext**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/D3plusContext.js#L3)
+
+A React context instance used to provide global config options via a provider (D3plusContext.Provider).
+
+
+This is a global function.
 
 ---
 
 <a name="Donut"></a>
-#### **Donut** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Donut.js#L4)
+#### d3plus.**Donut**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Donut.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Geomap"></a>
-#### **Geomap** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Geomap.js#L4)
+#### d3plus.**Geomap**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Geomap.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="LinePlot"></a>
-#### **LinePlot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/LinePlot.js#L4)
+#### d3plus.**LinePlot**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/LinePlot.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Matrix"></a>
-#### **Matrix** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Matrix.js#L4)
+#### d3plus.**Matrix**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Matrix.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Network"></a>
-#### **Network** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Network.js#L4)
+#### d3plus.**Network**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Network.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Pack"></a>
-#### **Pack** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Pack.js#L4)
+#### d3plus.**Pack**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Pack.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Pie"></a>
-#### **Pie** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Pie.js#L4)
+#### d3plus.**Pie**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Pie.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Plot"></a>
-#### **Plot** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Plot.js#L4)
+#### d3plus.**Plot**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Plot.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Priestley"></a>
-#### **Priestley** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Priestley.js#L4)
+#### d3plus.**Priestley**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Priestley.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Radar"></a>
-#### **Radar** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Radar.js#L4)
+#### d3plus.**Radar**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Radar.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="RadialMatrix"></a>
-#### **RadialMatrix** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/RadialMatrix.js#L4)
+#### d3plus.**RadialMatrix**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/RadialMatrix.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Rings"></a>
-#### **Rings** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Rings.js#L4)
+#### d3plus.**Rings**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Rings.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Sankey"></a>
-#### **Sankey** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Sankey.js#L4)
+#### d3plus.**Sankey**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Sankey.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="StackedArea"></a>
-#### **StackedArea** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/StackedArea.js#L4)
+#### d3plus.**StackedArea**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/StackedArea.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Tree"></a>
-#### **Tree** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Tree.js#L4)
+#### d3plus.**Tree**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Tree.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Treemap"></a>
-#### **Treemap** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Treemap.js#L4)
+#### d3plus.**Treemap**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Treemap.jsx#L5)
 
 
-This is a global class, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
+This is a global function, and extends all of the methods and functionality of [<code>Viz</code>](#Viz).
 
 ---
 
 <a name="Viz"></a>
-#### **Viz** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L6)
-
-
-This is a global class, and extends all of the methods and functionality of <code>React.Component</code>.
-
-
-* [Viz](#Viz) ⇐ <code>React.Component</code>
-    * [new Viz()](#new_Viz_new)
-    * [.module.exports](#Viz.module.exports)
-
-
-<a name="new_Viz_new" href="#new_Viz_new">#</a> new **Viz**()
+#### d3plus.**Viz**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L5)
 
 Creates SVG paths and coordinate points based on an array of data. See [this example](https://d3plus.org/examples/d3plus-geomap/getting-started/) for help getting started using the geomap generator.
 
 
+This is a global function.
 
 
-
-<a name="Viz.module.exports" href="#Viz.module.exports">#</a> Viz.**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L93)
+<a name="Viz.module.exports" href="#Viz.module.exports">#</a> .**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.jsx#L75)
 
 
 This is a static property of [<code>Viz</code>](#Viz).
@@ -315,4 +315,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Tue, 25 Oct 2022 19:43:27 GMT</sub>
+###### <sub>Documentation generated on Tue, 25 Oct 2022 21:19:19 GMT</sub>
