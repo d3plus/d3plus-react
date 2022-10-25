@@ -18,3 +18,5 @@ export {default as Sankey} from "./src/Sankey";
 export {default as StackedArea} from "./src/StackedArea";
 export {default as Tree} from "./src/Tree";
 export {default as Treemap} from "./src/Treemap";
+
+export {default as D3plusContext} from "./src/D3plusContext";
