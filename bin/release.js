@@ -1,18 +1,18 @@
-#! /usr/bin/env node
+import {Octokit} from "@octokit/rest";
+import babel from "@babel/core";
+import execAsync from "./execAsync.js";
+import {execSync} from "child_process";
+import fs from "fs";
+import path from "path";
+import shell from "shelljs";
+import logFactory from "../node_modules/d3plus-dev/bin/log.js";
 
-const {Octokit} = require("@octokit/rest"),
-      babel = require("@babel/core"),
-      execAsync = require("./execAsync"),
-      {execSync} = require("child_process"),
-      fs = require("fs"),
-      path = require("path"),
-      shell = require("shelljs"),
-      token = shell.env.GITHUB_TOKEN,
-      {name, version} = JSON.parse(shell.cat("package.json"));
+const token = shell.env.GITHUB_TOKEN;
+const {name, version} = JSON.parse(shell.cat("package.json"));
 
 const github = new Octokit({auth: token});
 shell.config.silent = true;
-const log = require("../node_modules/d3plus-dev/bin/log")(`release v${version}`);
+const log = logFactory(`release v${version}`);
 
 let minor = version.split(".");
 const prerelease = parseFloat(minor[0]) === 0;

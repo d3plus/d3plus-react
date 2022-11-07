@@ -1,5 +1,5 @@
 // modified from https://gist.github.com/davidrleonard/2962a3c40497d93c422d1269bcd38c8f
-const shell = require("shelljs");
+import shell from "shelljs";
 
 /**
     Asynchronously executes a shell command and returns a promise that resolves
@@ -15,10 +15,7 @@ const shell = require("shelljs");
     See Node docs: https://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback
 
     @example
-
-        const execAsync = require('execAsync');
         execAsync('ls -al', { silent: true, cwd: '/Users/admin/' });
-
     @param {String} cmd - The shell command to execute
     @param {Object} opts - Any opts to pass in to exec (see shell.js docs and Node's native `exec` documentation)
     @returns {String.<Promise>} - Resolves with the command results from `stdout`
@@ -33,4 +30,4 @@ function execAsync(cmd, opts = {}) {
   });
 }
 
-module.exports = execAsync;
+export default execAsync;

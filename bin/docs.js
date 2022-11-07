@@ -1,7 +1,7 @@
-#! /usr/bin/env node
+import logFactory from "../node_modules/d3plus-dev/bin/log.js";
+import shell from "shelljs";
 
-const log = require("../node_modules/d3plus-dev/bin/log")("documentation"),
-      shell = require("shelljs");
+const log = logFactory("documentation");
 const {description, name} = JSON.parse(shell.cat("package.json"));
 
 log.timer("writing JSDOC comments to README.md");
