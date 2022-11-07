@@ -39,7 +39,7 @@ shell.ls("-R", "src/**/*.{js,jsx}").concat(["index.js"])
         !fs.existsSync(dir) && fs.mkdirSync(dir);
         return dir;
       }, "es/");
-    fs.writeFileSync(`es/${file}`, code);
+    fs.writeFileSync(`es/${file.replace(".jsx", "js")}`, code);
   });
 
 log.timer("compiling release notes");
