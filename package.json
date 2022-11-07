@@ -2,8 +2,15 @@
   "name": "d3plus-react",
   "version": "1.2.1",
   "description": "React components for d3plus visualizations.",
+  "type": "module",
   "main": "es/index.js",
   "jsnext:main": "es/index",
+  "module": "es/index",
+  "sideEffects": false,
+  "files": [
+    "bin",
+    "es"
+  ],
   "license": "MIT",
   "homepage": "https://d3plus.org",
   "repository": {
@@ -48,11 +55,5 @@
     "eslint-plugin-react": "^7.22.0",
     "prop-types": ">=15.6.2",
     "react": "^17.0.1"
-  },
-  "module": "es/index",
-  "sideEffects": false,
-  "files": [
-    "bin",
-    "es"
-  ]
+  }
 }
