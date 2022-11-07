@@ -1,6 +1,6 @@
 import React from "react";
 import {RadialMatrix as type} from "d3plus-matrix";
-import Viz from "./Viz";
+import Viz from "./Viz.js";
 
 /**
     @function RadialMatrix

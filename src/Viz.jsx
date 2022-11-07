@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
 import {assign} from "d3plus-common";
-import D3plusContext from "./D3plusContext";
+import D3plusContext from "./D3plusContext.js";
 
 /**
     @function Viz

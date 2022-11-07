@@ -1,6 +1,6 @@
 import React from "react";
 import {Sankey as type} from "d3plus-network";
-import Viz from "./Viz";
+import Viz from "./Viz.js";
 
 /**
     @function Sankey

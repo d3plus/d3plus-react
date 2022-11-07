@@ -1,6 +1,6 @@
 import React from "react";
 import {Plot as type} from "d3plus-plot";
-import Viz from "./Viz";
+import Viz from "./Viz.js";
 
 /**
     @function Plot
