@@ -1,6 +1,6 @@
 import React from "react";
 import {Radar as type} from "d3plus-plot";
-import Viz from "./Viz.jsx";
+import Viz from "./Viz.js";
 
 /**
     @function Radar

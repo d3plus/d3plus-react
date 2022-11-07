@@ -29,7 +29,7 @@ shell.mkdir("-p", "es");
 const babelRC = JSON.parse(shell.cat(path.join(process.cwd(), "node_modules/d3plus-dev/bin/.babelrc")));
 babelRC.presets.push("@babel/preset-react");
 
-shell.ls("-R", "src/**/*.{js,jsx}").concat(["index.js"])
+shell.ls("-R", "src/**/*.js").concat(["index.js"])
   .forEach(file => {
     const {code} = babel.transformFileSync(file, babelRC);
     file.split("/")
@@ -39,7 +39,7 @@ shell.ls("-R", "src/**/*.{js,jsx}").concat(["index.js"])
         !fs.existsSync(dir) && fs.mkdirSync(dir);
         return dir;
       }, "es/");
-    fs.writeFileSync(`es/${file.replace(".jsx", ".js")}`, code);
+    fs.writeFileSync(`es/${file}`, code);
   });
 
 log.timer("compiling release notes");

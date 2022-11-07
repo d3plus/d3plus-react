@@ -1,6 +1,6 @@
 import React from "react";
 import {Matrix as type} from "d3plus-matrix";
-import Viz from "./Viz.jsx";
+import Viz from "./Viz.js";
 
 /**
     @function Matrix

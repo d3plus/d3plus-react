@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Treemap} from "../index.js";
+import {Treemap} from "../es/index.js";
 
 const config = {
   data: [
