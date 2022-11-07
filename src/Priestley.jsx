@@ -1,6 +1,6 @@
 import React from "react";
 import {Priestley as type} from "d3plus-priestley";
-import Viz from "./Viz.js";
+import Viz from "./Viz.jsx";
 
 /**
     @function Priestley

@@ -1,6 +1,6 @@
 import React from "react";
 import {Donut as type} from "d3plus-hierarchy";
-import Viz from "./Viz.js";
+import Viz from "./Viz.jsx";
 
 /**
     @function Donut

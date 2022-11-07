@@ -1,6 +1,6 @@
 import React from "react";
 import {Geomap as type} from "d3plus-geomap";
-import Viz from "./Viz.js";
+import Viz from "./Viz.jsx";
 
 /**
     @function Geomap
