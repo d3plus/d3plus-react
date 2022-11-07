@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {D3plusContext} from "../index.js";
+import {D3plusContext} from "d3plus-react";
 import Test from "./Test.jsx";
 
 const globalConfig = {
