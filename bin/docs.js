@@ -9,16 +9,11 @@ const template = `${shell.tempdir()}/README.hbs`;
 const docDir = `${shell.pwd()}/node_modules/d3plus-dev/bin/docs`;
 const contents = `# ${name}
 
-[![NPM Release](http://img.shields.io/npm/v/${name}.svg?style=flat)](https://www.npmjs.org/package/${name})
-[![Build Status](https://travis-ci.org/d3plus/${name}.svg?branch=master)](https://travis-ci.org/d3plus/${name})
-[![Dependency Status](http://img.shields.io/david/d3plus/${name}.svg?style=flat)](https://david-dm.org/d3plus/${name})
-[![Gitter](https://img.shields.io/badge/-chat_on_gitter-brightgreen.svg?style=flat&logo=gitter-white)](https://gitter.im/d3plus/)
-
 ${description}
 
 ## Installing
 
-Use \`npm install ${name} -S\` to install the package as a dependency.
+Using npm: \`npm install ${name}\`
 
 ## Configuration
 
@@ -39,39 +34,26 @@ const methods = {
 <Treemap config={methods} />
 \`\`\`
 
-Additionally, a global set of styles can be provided using the "d3plus" React context key. This allows you to set base styles on all of your visualizations in one place, often in an external file. A component's \`config\` set by props will override global defaults key-by-key using a deep cloning function.
+Additionally, a global set of styles can be set using the \`D3plusContext\` Provider. This allows you to set base styles on all of your visualizations in one place, often in an external file. A component's \`config\` set by props will override global defaults key-by-key using a deep cloning function.
 \`\`\`jsx
-import React, {Component} from "react";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {D3plusContext} from "d3plus-react";
+import App from "src/App.jsx";
 
-export default class MyApp extends Component {
-
-  getChildContext() {
-
-    return {
-      d3plus: {
-        shapeConfig: {
-          fontFamily: "Comic Sans MS"
-        }
-      }
-    };
-
+const globalConfig = {
+  shapeConfig: {
+    fill: "red"
   }
-
-  render() {
-
-    return (
-      <main>
-        {/* child components containing visualizations */}
-      </main>
-    );
-
-  }
-
-}
-
-MyApp.childContextTypes = {
-  d3plus: PropTypes.object
 };
+
+ReactDOM.createRoot(document.getElementById("viz")).render(
+  <React.StrictMode>
+    <D3plusContext.Provider value={globalConfig}>
+      <App />
+    </D3plusContext.Provider>
+  </React.StrictMode>
+);
 \`\`\`
 
 ## Update Cycle

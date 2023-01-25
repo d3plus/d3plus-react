@@ -1,4 +1,5 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
+import PropTypes from "prop-types";
 import {assign} from "d3plus-common";
 import D3plusContext from "./D3plusContext.js";
 
@@ -63,6 +64,18 @@ Viz.defaultProps = {
   className: "viz",
   forceUpdate: false
 };
+
+Viz.propTypes = {
+  className: PropTypes.string,
+  config: PropTypes.shape({
+    forceUpdate: PropTypes.any
+  }),
+  dataFormat: PropTypes.func,
+  linksFormat: PropTypes.func,
+  nodesFormat: PropTypes.func,
+  topojsonFormat: PropTypes.func,
+  type: PropTypes.string
+}
 
 /**
     @memberof Viz
