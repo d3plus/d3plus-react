@@ -1,15 +1,10 @@
 # d3plus-react
 
-[![NPM Release](http://img.shields.io/npm/v/d3plus-react.svg?style=flat)](https://www.npmjs.org/package/d3plus-react)
-[![Build Status](https://travis-ci.org/d3plus/d3plus-react.svg?branch=master)](https://travis-ci.org/d3plus/d3plus-react)
-[![Dependency Status](http://img.shields.io/david/d3plus/d3plus-react.svg?style=flat)](https://david-dm.org/d3plus/d3plus-react)
-[![Gitter](https://img.shields.io/badge/-chat_on_gitter-brightgreen.svg?style=flat&logo=gitter-white)](https://gitter.im/d3plus/)
-
 React components for d3plus visualizations.
 
 ## Installing
 
-Use `npm install d3plus-react -S` to install the package as a dependency.
+Using npm: `npm install d3plus-react`
 
 ## Configuration
 
@@ -30,39 +25,26 @@ const methods = {
 <Treemap config={methods} />
 ```
 
-Additionally, a global set of styles can be provided using the "d3plus" React context key. This allows you to set base styles on all of your visualizations in one place, often in an external file. A component's `config` set by props will override global defaults key-by-key using a deep cloning function.
+Additionally, a global set of styles can be set using the `D3plusContext` Provider. This allows you to set base styles on all of your visualizations in one place, often in an external file. A component's `config` set by props will override global defaults key-by-key using a deep cloning function.
 ```jsx
-import React, {Component} from "react";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {D3plusContext} from "d3plus-react";
+import App from "src/App.jsx";
 
-export default class MyApp extends Component {
-
-  getChildContext() {
-
-    return {
-      d3plus: {
-        shapeConfig: {
-          fontFamily: "Comic Sans MS"
-        }
-      }
-    };
-
+const globalConfig = {
+  shapeConfig: {
+    fill: "red"
   }
-
-  render() {
-
-    return (
-      <main>
-        {/* child components containing visualizations */}
-      </main>
-    );
-
-  }
-
-}
-
-MyApp.childContextTypes = {
-  d3plus: PropTypes.object
 };
+
+ReactDOM.createRoot(document.getElementById("viz")).render(
+  <React.StrictMode>
+    <D3plusContext.Provider value={globalConfig}>
+      <App />
+    </D3plusContext.Provider>
+  </React.StrictMode>
+);
 ```
 
 ## Update Cycle
@@ -291,7 +273,7 @@ This is a global function, and extends all of the methods and functionality of [
 ---
 
 <a name="Viz"></a>
-#### d3plus.**Viz**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L5)
+#### d3plus.**Viz**() [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L6)
 
 Creates SVG paths and coordinate points based on an array of data. See [this example](https://d3plus.org/examples/d3plus-geomap/getting-started/) for help getting started using the geomap generator.
 
@@ -299,7 +281,7 @@ Creates SVG paths and coordinate points based on an array of data. See [this exa
 This is a global function.
 
 
-<a name="Viz.module.exports" href="#Viz.module.exports">#</a> .**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L75)
+<a name="Viz.module.exports" href="#Viz.module.exports">#</a> .**module.exports** [<>](https://github.com/d3plus/d3plus-react/blob/master/src/Viz.js#L88)
 
 
 This is a static property of [<code>Viz</code>](#Viz).
@@ -315,4 +297,4 @@ This is a static property of [<code>Viz</code>](#Viz).
 
 ---
 
-###### <sub>Documentation generated on Mon, 07 Nov 2022 23:35:20 GMT</sub>
+###### <sub>Documentation generated on Wed, 25 Jan 2023 19:15:04 GMT</sub>

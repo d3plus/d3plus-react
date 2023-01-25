@@ -1,5 +1,5 @@
 // modified from https://gist.github.com/davidrleonard/2962a3c40497d93c422d1269bcd38c8f
-import shell from "shelljs";
+const shell = require("shelljs");
 
 /**
     Asynchronously executes a shell command and returns a promise that resolves
@@ -30,4 +30,4 @@ function execAsync(cmd, opts = {}) {
   });
 }
 
-export default execAsync;
+module.exports = execAsync;

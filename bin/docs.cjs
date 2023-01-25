@@ -1,5 +1,5 @@
-import logFactory from "../node_modules/d3plus-dev/bin/log.js";
-import shell from "shelljs";
+const logFactory = require("../node_modules/d3plus-dev/bin/log.cjs");
+const shell = require("shelljs");
 
 const log = logFactory("documentation");
 const {description, name} = JSON.parse(shell.cat("package.json"));
@@ -120,7 +120,7 @@ const config = {
 `;
 new shell.ShellString(contents).to(template);
 
-shell.exec(`jsdoc2md '+(bin|src)/**/*.+(js|jsx)' --separators --helper ${ docDir }/helpers.js --partial '${ docDir }/partials/*.hbs' -t ${template} > README.md`, (code, stdout) => {
+shell.exec(`jsdoc2md '+(src)/**/*.+(js|jsx)' --separators --helper ${ docDir }/helpers.cjs --partial '${ docDir }/partials/*.hbs' -t ${template} > README.md`, (code, stdout) => {
   if (code) {
     log.fail();
     shell.echo(stdout);

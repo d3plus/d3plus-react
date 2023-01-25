@@ -1,11 +1,11 @@
-import {Octokit} from "@octokit/rest";
-import babel from "@babel/core";
-import execAsync from "./execAsync.js";
-import {execSync} from "child_process";
-import fs from "fs";
-import path from "path";
-import shell from "shelljs";
-import logFactory from "../node_modules/d3plus-dev/bin/log.js";
+const {Octokit} = require("@octokit/rest");
+const babel = require("@babel/core");
+const execAsync = require("./execAsync.cjs");
+const {execSync} = require("child_process");
+const fs = require("fs");
+const path = require("path");
+const shell = require("shelljs");
+const logFactory = require("d3plus-dev/bin/log.cjs");
 
 const token = shell.env.GITHUB_TOKEN;
 const {name, version} = JSON.parse(shell.cat("package.json"));
