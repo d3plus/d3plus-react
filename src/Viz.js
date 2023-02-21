@@ -74,7 +74,7 @@ Viz.propTypes = {
   linksFormat: PropTypes.func,
   nodesFormat: PropTypes.func,
   topojsonFormat: PropTypes.func,
-  type: PropTypes.string
+  type: PropTypes.func
 }
 
 /**
