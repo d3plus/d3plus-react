@@ -34,7 +34,7 @@
     "d3plus-hierarchy": "^1.1.0",
     "d3plus-matrix": "^1.2.0",
     "d3plus-network": "^1.1.0",
-    "d3plus-plot": "^1.2.2",
+    "d3plus-plot": "^1.2.3",
     "d3plus-priestley": "^1.1.0",
     "d3plus-viz": "^1.3.2"
   },
